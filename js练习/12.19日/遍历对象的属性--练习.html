@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 遍历对象 -->
+    <!-- for(var key in 对象名){
+         console.log(key) ------ 打出属性名
+         console.log(对象名[key]) ------ 打出属性值
+} -->
+
+    <script>
+        // var wyh = {
+        //     name: '王永红',
+        //     sex: '女',
+        //     age: 18,
+        //     say: function () {
+        //         console.log('gyagdfvjs');
+        //     }
+        // }
+        // for (var key in wyh) {
+        //     // console.log(key);
+        //     console.log(wyh[key]);
+        // }
+
+
+        // var wyh = {
+        //     name: "哈哈哈",
+        //     age: 18,
+        //     hobby: ["喀喀喀","哈哈哈","和h欸","hahhcsbj"]
+        // }
+        //  for(var key in wyh){
+        //     //  console.log(key);
+        //     console.log(wyh[key]);
+        //  }
+
+
+        // var ehy = {
+        //     name: "哈哈哈",
+        //     sex: '吼吼吼',
+        //     say: function(){
+        //         console.log('jsabcj');
+        //     }
+        // }
+        // for(var key in ehy){
+        //     // console.log(key); ==== 打出对象的属性名
+        //     console.log(ehy[key]); ==== 打出对象的属性值
+        // }
+
+        var wyh = {
+            name: "哈哈哈",
+            sex: "女",
+            hobby: ["就阿布沙", "骄傲吹"],
+            say: function(){
+                console.log("会产生处理厂");
+            }
+        }
+        for(var key in wyh){
+            // console.log(key);
+            console.log(wyh[key]);
+        }
+    </script>
+</body>
+
+</html>

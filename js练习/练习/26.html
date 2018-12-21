@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input{
+          width: 200px;
+          height: 30px;
+          border-radius: 30px;
+          padding: 0 20px;
+          border: 1px solid #cccccc;
+          outline: none;
+      }
+    </style>
+</head>
+
+<body>
+    <!-- 焦点和失去焦点事件 -->
+    <!-- 需求： 如果输入框有焦点 输入框中的文字消失 如果输入框中输入了文字 那么原来的文字就不会换原 如果输入框中没有内容 那么原来的文字还原 -->
+    <!-- <input type="text" id="search" value="在Google中搜索，或输入网址">
+    <script>
+        //获取输入框
+        var input = document.querySelector('#search');
+        //给输入框添加一个焦点事件
+        input.onfocus = function () {
+            //让输入框中的文字消失
+            this.value = "";
+        }
+        //给输入框添加一个失去焦点事件
+        input.onblur = function () {
+            //如果输入框中没有文字
+            if (this.value.length == 0) {
+                //让输入框中的文字还原回来
+                this.value = "在Google中搜索，或输入网址";
+            }
+        }
+    </script> -->
+
+    <!-- 焦点事件和失去焦点事件 -->
+    <!--写一个输入框 -->
+    <!-- <input type="text" name="" id="" value="hahahahhaah">
+    <script>
+        // 获取输入框
+        var input = document.querySelector('input');
+        // 给输入框添加焦点事件
+        input.onfocus = function () {
+            // 光标出现跳动 文字消失
+            this.value = "";
+        }
+        // 给输入框添加失去焦点事件
+        input.onblur = function () {
+            // 判断有没有写内容
+            if (this.value.length == 0) {
+                // 如果没有 还原原来的文字
+                this.value = "hahahahhaah";
+            }
+        }
+    </script> -->
+
+    <!-- 验证文本框密码 -->
+    <!-- 当输入框中的值为6-20位之间为绿色 否则为红色 -->
+    <!-- 先写一个输入框 -->
+    <!-- <input type="text" name="" id="txt">
+    <script>
+        // 获取输入框
+        var input = document.querySelector('#txt');
+        // 给输入框一个失去焦点事件 (要在失去焦点时做判断)
+        input.onblur = function () {
+            //判断一下 用户输入的数据是否在6-20位之间
+            if (this.value.length >= 6 && this.value.length <= 20) {
+                //如果是 那么输入框背景为绿色
+                this.style.backgroundColor = "yellowgreen";
+
+
+            } else {
+                // 否则为红色
+                this.style.backgroundColor = "red";
+            }
+        }
+
+    </script> -->
+
+
+    <!-- 验证文本框密码 -->
+    <!-- <input type="text" name="" id="">
+    <script>
+        var input = document.querySelector("input");
+        input.onblur = function () {
+            if (this.value.lenght >= 6 && this.value.length <= 20) {
+                this.style.backgroundColor = "blue";
+            } else {
+                this.style.backgroundColor = "red";
+            }
+        }
+    </script> -->
+
+    <!-- <input type="text">
+    <script>
+        var input = document.querySelector('input');
+        input.onblur = function () {
+            if (this.value.length >= 6 && this.value.length <= 20) {
+                this.style.backgroundColor = "yellow";
+            } else {
+                this.style.backgroundColor = "red";
+            }
+        }
+    </script> -->
+
+    <!-- 验证文本框密码  -->
+    <!-- <input type="text" name="" id="">
+    <script>
+    var input = document.querySelector('input');
+    input.onblur = function(){
+        if(this.value.length >= 6 && this.value.length <= 20){
+            this.style.backgroundColor = "blue";
+        }else{
+            this.style.backgroundColor ="red";
+        }
+    }
+    </script> -->
+
+    <!-- 设置和获取输入框的值 -->
+    <!-- 点击获取 能获取用户输入在输入框中的文字 -->
+    <!-- 点击设置 就能把你想要设置的值 设置给输入框 -->
+    <!-- <button id="get">获取</button>
+    <button id="set">设置</button>
+    <input type="text" name="" id="btn"> -->
+    <!-- <script>
+        //获取两个按钮 和输入框
+        var get = document.querySelector('#get');
+        var set = document.querySelector('#set');
+        var input = document.querySelector('#btn');
+        //给获取按钮添加点击事件
+        get.onclick = function () {
+            console.log(input.value);
+        }
+        //设置输入框色值
+        input.value = "hahahh";
+        //给设置按钮添加点击事件
+        set.onclick = function () {
+            input.value = "agagga";
+        }
+    </script> -->
+
+    <!-- 设置和获取输入框的值 -->
+    <!-- <button id="get">获取</button>
+    <button id="set">设置</button>
+    <input type="text" name="" id="btn">
+    <script>
+    var  get = document.querySelector('#get');
+    var  set = document.querySelector('#set');
+    var  input = document.querySelector('#btn');
+    get.onclick = function(){
+        console.log(input.value);
+    }
+    input.value = "rrrrrrrr";
+    set.onclick = function(){
+        input.value = "hhhhhhhhh";
+    }
+    </script> -->
+
+    <!-- 设置和获取输入框的值 -->
+    <!-- 写两个按钮 和 输入框 -->
+    <!-- <button id="get">获取</button>
+    <button id="set">设置</button>
+    <input type="text" name="" id="btn">
+    <script>
+    // 获取按钮和输入框
+    var get = document.querySelector('#get');
+    var set = document.querySelector('#set');
+    var input = document.querySelector('#btn');
+    //给获取按钮添加点击事件
+    get.onclick = function(){
+        console.log(input.value);
+    }
+    //设置输入框内容
+
+    // 给设置按钮添加点击事件
+    set.onclick = function(){
+        input.value = "asdfgh";
+    }
+    </script> -->
+
+    <!-- innerText -->
+    <!-- 获取内容: 如果标签中 只有内容 那么获取 如果标签中还有标签 只获取内容 不获取标签 -->
+    <!-- 设置内容: 如果内容中只有文字 那么就把文字写进去 如果内容中有标签 把标签怎么样的写法也写入到网页中 -->
+    <!-- <div class="box1">你好</div>
+    <div class="box2">nihaoAA
+        <span>hello</span>
+    </div> -->
+
+    <!-- <div class="box1"></div>
+    <div class="box2"></div> -->
+    <!-- <script>
+//获取
+// console.log(document.querySelector('.box1').innerText);
+// console.log(document.querySelector('.box2').innerText);
+//设置
+// document.querySelector(".box1").innerText = "asdfgh";
+// document.querySelector(".box2").innerText = "asdfgh <span>qwert</span>";
+</script> -->
+
+
+    <!-- <span class="box1">你好</span>
+<div class="box2">Hahha
+    <p>你好啊</p>
+</div>
+<script>
+console.log(document.querySelector('.box1').innerText);
+console.log(document.querySelector('.box2').innerText);
+</script> -->
+
+    <!-- <p class="box1"></p>
+<p class="box2"></p>
+<script>
+document.querySelector(".box1").innerText = "你在干嘛";
+document.querySelector('.box2').innerText = "哈哈哈 <span>ahaha</span>" -->
+    <!-- </script> -->
+
+    <!-- innerHTML -->
+    <!-- 获取内容: 如果标签中的内容有标签 那么不仅仅获取内容 还会获取标签 -->
+    <!-- 设置内容: 如果内容中有标签  那么不仅仅设置内容而且还翻译标签 -->
+    <!-- <span class="box1">你好</span>
+<div class="box2">Hahha
+    <p>你好啊</p>
+</div>
+<script>
+console.log(document.querySelector('.box1').innerHTML);
+console.log(document.querySelector('.box2').innerHTML);
+</script> -->
+
+    <!-- <p class="box1"></p>
+<p class="box2"></p>
+<script>
+document.querySelector('.box1').innerHTML = "你好啊啊啊啊";
+document.querySelector('.box2').innerHTML = "Nihsahkn <span>asdfgNi</span>" -->
+    <!-- </script> -->
+    <!-- <div class="box1">怒火大家
+<span>
+    Hsasdfdj
+</span>
+</div>
+<div class="box2">hdsh哈哈</div>
+<script>
+console.log(document.querySelector('.box1').innerHTML);
+console.log(document.querySelector('.box2').innerHTML); -->
+    <!-- </script> -->
+
+    <!-- <div class="box1"></div>
+<div class="box2"></div>
+<script>
+document.querySelector('.box1').innerHTML = "和市场";
+document.querySelector('.box2').innerHTML = "能保护的 <span>sdcg</span>"
+</script> -->
+
+    <!-- 自定义属性 -->
+    <!-- 在写自定义属性时 在前面带上data-  -->
+    <!-- <ul>
+    <li data-score="55">asdfg</li>
+    <li data-score="54">sd</li>
+    <li data-score="50">sdg</li>
+    <li data-score="95">ng bvc</li>
+    <li data-score="58">trgf</li>
+</ul> -->
+
+    <!-- 自定义属性的设置和获取 -->
+    <!-- 获取: getAttribute('属性名') -->
+    <!-- 设置: setAttribute('属性名','属性值')-->
+    <!-- <ul>
+        <li>asdfg</li>
+        <li>sd</li>
+        <li>sdg</li>
+        <li>ng bvc</li>
+        <li>trgf</li>
+    </ul>
+    <script>
+        //获取li
+        var li = document.querySelectorAll('li');
+        //给每个li添加一个成绩score = 50 60 70 80 90 遍历
+        for (var i = 0; i < li.length; i++) {
+            //给li设置值
+            li[i].setAttribute("score", (i + 5) * 10);
+            //给li点击事件
+            li[i].onclick = function () {
+                //获取li值
+                alert(this.getAttribute('score'));
+            }
+        }
+    </script> -->
+
+    <!-- 自定义属性的设置和获取 -->
+    <!-- <ul>
+        <li>刘杰</li>
+        <li>大猪蹄</li>
+        <li>啊哈哈</li>
+        <li>后i后悔</li>
+        <li>吼吼</li>
+    </ul>
+    <script>
+        //获取li
+        var li = document.querySelectorAll('li');
+        //给li设置值 遍历
+        for (var i = 0; i < li.length; i++) {
+            li[i].setAttribute('score', (i + 10) * 10);
+            li[i].onclick = function () {
+                alert(this.getAttribute('score'));
+            }
+        }
+
+    </script> -->
+
+    <!-- 自定义属性的获取和设置 -->
+    <!-- <ol>
+        <li>蓝精灵</li>
+        <li>哪吒</li>
+        <li>阿福</li>
+        <li>天线宝宝</li>
+        <li>阿杰</li>
+    </ol>
+    <script>
+        //获取li
+        var li = document.querySelectorAll('li');
+        //遍历 设置值
+        for (var i = 0; i < li.length; i++) {
+            li[i].setAttribute('score', (i + 8) * 10);
+            li[i].onclick = function () {
+                //获取值
+                alert(this.getAttribute('score'));
+            }
+        }
+    </script> -->
+
+    <!-- 移除自定义属性 -->
+    <!-- removeAttribute('属性名') -->
+    <!-- <button>移除</button>
+    <div data-score="99"></div>
+    <script>
+        console.log(document.querySelector('div').getAttribute('data-score'));
+        //点击移除自定义属性
+        document.querySelector('button').onclick = function () {
+            document.querySelector('div').removeAttribute("data-score");
+        }
+    </script> -->
+
+    <!-- 移除自定义属性 -->
+    <!-- removeAttribute("属性名") -->
+    <!-- <button>移除</button>
+    <div data-name="王永红"></div>
+    <script>
+    console.log(document.querySelector('div').getAttribute("data-name"));
+    document.querySelector("button").onclick = function(){
+        document.querySelector("div").removeAttribute("data-name");
+    }
+    </script> -->
+
+    <!-- 移除自定义属性 -->
+    <!-- 写一个按钮 -->
+    <!-- <button>移除</button>
+        一个div -->
+    <!-- <div data-name="刘杰">哈哈哈</div>
+    <script>
+        // 获取div中的自定义属性
+    console.log(document.querySelector('div').getAttribute('data-name'));
+    //获取button 给button点击事件
+    document.querySelector('button').onclick = function(){
+        // 移除div中的自定义属性
+        document.querySelector('div').removeAttribute('data-name');
+    }
+    </script>  -->
+
+    <!-- 案例设置和获取文本框的值 -->
+    <!-- <button id="set">设置</button>
+    <button id="get">获取</button>
+    <input type="text" name="" id="btn">
+    <script>
+        var get = document.querySelector('#get');
+        var set = document.querySelector('#set');
+        var input = document.querySelector('#btn');
+        get.onclick = function () {
+            console.log(input.value);
+        }
+        set.onclick = function () {
+            input.value = "啊嘎嘎";
+        }
+    </script> -->
+
+    <!-- 自定义属性的设置和获取 -->
+    <!-- <ul>
+        <li>刘杰</li>
+        <li>大猪蹄</li>
+        <li>猪头</li>
+        <li>哈哈哈</li>
+        <li>嘎嘎嘎</li>
+    </ul>
+    <script>
+        var li = document.querySelectorAll('li');
+        for (var i = 0; i < li.length; i++) {
+            li[i].setAttribute('score', (i + 9) * 10);
+            li[i].onclick = function () {
+                alert(this.getAttribute('score'));
+            }
+        }
+    </script> -->
+
+    <!-- 自定义属性的获取和设置 -->
+    <!-- <ul>
+        <li>asdf</li>
+        <li>asddftghf</li>
+        <li>sdfg</li>
+        <li>sdfgwerty</li>
+        <li>jyhtgr</li>
+    </ul>
+    <script>
+        var li = document.querySelectorAll('li');
+        for (var i = 0; i < li.length; i++) {
+            li[i].setAttribute('score', (i + 7) * 10);
+            li[i].onclick = function () {
+                alert(this.getAttribute('score'));
+            }
+        }
+    </script> -->
+
+   
+</html>

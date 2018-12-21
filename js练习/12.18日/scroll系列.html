@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      /* margin: 20px auto; */
+      width: 200px;
+      height: 201px;
+      background-color: red;
+      left: 137px;
+      /* overflow-y: auto; */
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，
+  </div>
+
+  <script>
+    var box = document.querySelector('.box');
+    // 如何获取元素中的宽 高  左边距离 顶部距离
+    // 元素.offsetWidth
+    console.log(box.offsetWidth) // 200
+    // // 元素.offsetHeight
+    console.log(box.offsetHeight) // 201
+    // // 元素.offsetLeft 距离左边的距离
+    console.log(box.offsetLeft) // 0
+    // 元素.offsetTop
+
+    //获取元素计算后的样式属性值
+    console.log(window.getComputedStyle(box, null)['left']);
+
+    // scroll 滚动
+    // scrollWidth 元素中啥都没有 就是元素的css中的width 要是有 就是内容的宽
+    // scrollHeight 元素中啥都没有 就是元素的css中的height 超出要是有 就是内容的高
+    // console.log(box.scrollHeight); // 201
+    // scrollLeft  内容滚动出去的左边距离  当水平方向有滚动条的时候 左边滚动出去的距离
+    // scrollTop   内容滚动出去的上面的距离  卷曲高度  滚出去的距离
+    // console.log(box.scrollTop);
+
+
+    // onscroll 当滚动条进行滚动的时候 不停的触发
+    // box.onscroll = function () {
+    //   // console.log(1);
+    //   console.log(box.scrollHeight); // 获取内容滚动出去的距离 实际也是 滚动条向下的距离
+    // }
+    
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //动画函数
+        function animate(elem, target) {
+            //清除定时器
+            clearInterval(elem.timer);
+            //获取元素的当前位置
+            var current = elem.offsetLeft;
+            //声明定时器
+            elem.timer = setInterval(function () {
+                //声明步进制
+                var step = 10;
+                //判断当前距离是不是小于目标距离 如果是 step 如果不是 -step
+                step = current < target ? step : -step;
+                //累加
+                current += step;
+                //判断目标距离 - 当前距离的差的绝对值 是不是 大于 步进制的绝对值
+                if (Math.abs(target - current) > Math.abs(step)) {
+                    //如果是 赋值
+                    elem.style.left = current + 'px';
+                } else {
+                    //否则 清除定时器
+                    clearInterval(elem.timer);
+                    elem.style.left = target + 'px';
+                }
+            }, 20)
+        }
+
+        function animate(elem, target) {
+            clearInterval(elem.timer);
+            var current = elem.offsetLeft;
+            elem.timer = setInterval(function () {
+                var step = 10;
+                step = current < target ? step : -step;
+                current += step;
+                if (Math.abs(target - current) > Math.abs(step)) {
+                    elem.style.left = current + 'px';
+                } else {
+                    elem.style.left = target + 'px';
+                    clearInterval(elem.timer);
+                }
+            }, 20)
+        }
+
+
+        function animate(elem, target) {
+            clearInterval(elem.target);
+            var current = elem.offsetLeft;
+            elem.timer = setInterval(function () {
+                var step = 10;
+                step = current < target ? step : -step;
+                current += step;
+                if (Math.abs(target - current) > Math.abs(step)) {
+                    elem.style.left = current + 'px';
+                } else {
+                    elem.style.left = target + 'px';
+                    clearInterval(elem.timer);
+                }
+            }, 20)
+        }
+
+        function animate(elem, target) {
+            clearInterval(elem.timer);
+            var current = elem.offsetLeft;
+            elem.timer = setInterval(function () {
+                var step = 10;
+                step = current < target ? step : -step;
+                current += step;
+                if (Math.abs(target - current) > Math.abs(step)) {
+                    elem.style.left = current + 'px';
+                } else {
+                    clearInterval(elem.timer);
+                    elem.style.left = target + 'px';
+                }
+            }, 20)
+        }
+    </script>
+</body>
+
+</html>

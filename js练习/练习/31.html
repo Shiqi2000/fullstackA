@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 第一种创建元素的方法 -->
+    <!-- 点击按钮 往网页中写入一行内容 内容被p标签包含 -->
+    <!-- <input type="button" value="按钮">
+    <div></div>
+    <script>
+        //获取按钮
+        var oBtn = document.querySelector('input');
+        //给按钮添加点击事件 
+        oBtn.onclick = function () {
+            //往网页中写入一行内容 document.write('标签 内容')
+            document.write('<p>Nihao</p>');
+        }   v` 
+//使用 document.write('标签 内容') 会覆盖文档中的所有内容 
+//如果想要往一个div中写入内容 不能用document.write('标签 内容')
+
+
+    </script> -->
+
+    <!-- 第二种创建元素的方法 -->
+    <!-- 点击按钮 往网页中写入一行内容 内容被p标签包含 -->
+    <!-- <input type="button" name="" id="" value="按钮">
+    <div>
+        <span></span>
+    </div>
+    <script>
+        //获取按钮
+        var oBtn = document.querySelector('input');
+        //给按钮添加点击事件 
+        oBtn.onclick = function () {
+            //获取div写入内容
+            document.querySelector('div').innerHTML = '<p>Nihao</p>';
+        }
+
+//元素.innerHTMl 可以把内容放到一个标签中 但是她会把原有的div中的标签替换 所以如果标签中没有任何内容 可以用innerHTML
+    </script> -->
+
+    <!-- 第三种创建元素的方法 document.createElement('标签名')-->
+    <!-- 点击按钮 往标签中写入内容 -->
+    <!-- <input type="button" value="按钮">
+    <ul></ul>
+    <script>
+        //获取按钮
+        var oBtn = document.querySelector('input');
+        //给按钮添加点击事件
+        oBtn.onclick = function () {
+            //先创建元素
+            var li = document.createElement('li');
+            //往元素中写入内容
+            li.innerHTML = "我是li";
+            //把元素插入到ul中
+            var ul = document.querySelector('ul');
+            ul.appendChild(li);
+        }
+
+    </script> -->
+
+    <!-- 点击按钮 往标签中写入内容 -->
+    <!-- <input type="button" value="按钮">
+    <ul></ul>
+    <script>
+        var oBtn = document.querySelector('input');
+        oBtn.onclick = function () {
+            var li = document.createElement('li');
+            li.innerHTML = "hellohi";
+            document.querySelector('ul').appendChild(li);
+        }
+
+    </script> -->
+
+    <!-- <input type="button" value="按钮">
+    <ul></ul>
+    <script>
+        var oBtn = document.querySelector('input');
+        oBtn.onclick = function () {
+            var li = document.createElement('li');
+            li.innerHTML = "asdfghjkl";
+            document.querySelector('ul').appendChild(li);
+        }
+    </script> -->
+
+    <!-- 点击按钮 在div中显示一张图片 用document.createElement() -->
+    <!-- <input type="button" value="按钮">
+    <div></div>
+    <script>
+        //获取按钮
+        var oBtn = document.querySelector('input');
+        //给按钮添加点击事件
+        oBtn.onclick = function () {
+            //创建元素img
+            var img = document.createElement('img');
+            //给元素设置src地址
+            img.src = "./2.jpg";
+            //把img插入div
+            document.querySelector('div').appendChild(img);
+        }
+
+    </script> -->
+
+    <!--点击按钮 显示一张图片 -->
+    <!-- <button>按钮</button>
+    <div></div>
+    <script>
+    var oBtn = document.querySelector('button');
+    oBtn.onclick = function(){
+        var img = document.createElement('img');
+        img.src = "./3.jpg";
+        document.querySelector('div').appendChild(img);
+    }
+    
+    
+    </script> -->
+
+
+    <!-- 点击按钮 显示一张图片在div中 -->
+    <!-- <button>按钮</button>
+    <div></div>
+    <script>
+        var oBtn = document.querySelector('button');
+        oBtn.onclick = function () {
+            var img = document.createElement('img');
+            img.src = "./1.jpg";
+            document.querySelector('div').appendChild(img);
+        }
+
+
+    </script> -->
+
+    <!-- 点击按钮 创建列表 -->
+    <!-- <input type="button" value="按钮">
+    <div>
+        <ul></ul>
+    </div>
+    <script>
+        //把数组中的每个名字 作为li的内容 输入到别中去 鼠标移入每个li li就变色
+        var names = ["杨过", "郭靖", "张无忌", "张三丰", "乔峰", "段飞", "丁棚"];
+        var oBtn = document.querySelector('input');
+        oBtn.onclick = function () {
+            //遍历每个元素
+            for (var i = 0; i < names.length; i++) {
+                //创建li元素
+                var li = document.createElement('li');
+                li.innerHTML = names[i];
+                document.querySelector('ul').appendChild(li);
+                //设置li的鼠标移入事件
+                li.onmouseover = function () {
+                    this.style.backgroundColor = "pink";
+                }
+                //设置li的鼠标移出事件
+                li.onmouseout = function () {
+                    this.style.backgroundColor = "white";
+                }
+            }
+        }
+
+    </script> -->
+
+    <!-- 点击按钮 创建列表 -->
+    <!-- <input type="button" value="按钮">
+    <ul></ul>
+    <script>
+        var names = ["杨过", "郭靖", "张无忌", "张三丰", "乔峰", "段飞", "丁棚"];
+        var oBtn = document.querySelector('input');
+        oBtn.onclick = function () {
+            for (var i = 0; i < names.length; i++) {
+                var li = document.createElement('li');
+                li.innerHTML = names[i];
+                document.querySelector('ul').appendChild(li);
+                li.onmouseover = function () {
+                    this.style.backgroundColor = "red";
+                }
+                li.onmouseout = function () {
+                    this.style.backgroundColor = "white";
+                }
+            }
+        }
+
+    </script> -->
+
+
+    <!-- 点击按钮创建列表 -->
+    <!-- <input type="button" value="按钮">
+    <ul></ul>
+    <script>
+    var names = ["哈哈","吼吼","嘿嘿","卡卡","咔咔"];
+    var oBtn = document.querySelector('input');
+    oBtn.onclick = function(){
+        for(var i = 0; i < names.length; i++){
+            var li = document.createElement('li');
+            li.innerHTML = names[i];
+            document.querySelector('ul').appendChild(li);
+            li.onmouseover = function(){
+                this.style.backgroundColor = "yellow";
+            }
+            li.onmouseout = function(){
+                this.style.backgroundColor = "white";
+            }
+        }
+    }
+    
+    </script> -->
+</body>
+
+</html>

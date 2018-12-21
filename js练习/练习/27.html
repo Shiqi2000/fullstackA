@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 获取父节点 -->
+    <!-- 父节点：parentNode -->
+    <!-- <div>
+       <p>
+           <span></span>
+       </p>
+   </div>
+<script>
+var span = document.querySelector('span');
+console.log(span.parentNode);//p
+console.log(span.parentNode.parentNode);//div
+console.log(span.parentNode.parentNode.parentNode);//body
+console.log(span.parentNode.parentNode.parentNode.parentNode);//html
+console.log(span.parentNode.parentNode.parentNode.parentNode.parentNode);
+</script> -->
+
+    <!-- 获取子节点 -->
+    <!-- childNodes -->
+    <!-- <div>
+    <p>
+        <span></span>
+    </p>
+</div>
+<script>
+var div = document.querySelector('div');
+console.log(div.childNodes);
+</script> -->
+
+    <!-- <div>
+    <span></span>
+    <p></p>
+    <ul>
+        <li>hahaha</li>
+        <li></li>
+        <li id="three"></li>
+        <li>哈哈哈</li>
+    </ul>
+</div>
+<script>
+//ul要获取自己的父元素 第一个子元素 最后一个子元素 所有子元素
+var ul = document.querySelector('ul');
+console.log(ul.parentElement);
+console.log(ul.firstElementChild);
+console.log(ul.lastElementChild);
+console.log(ul.children);
+
+//自己id是three
+var three = document.querySelector('#three');
+console.log(three.previousElementSibling);
+console.log(three.nextElementSibling);
+</script> -->
+
+    <!-- 给div中的p标签添加背景颜色 -->
+    <!-- <button>变色</button>
+    <div>
+        <span>qwer</span>
+        <p>嘿嘿嘿</p>
+        <span>我是span</span>
+        <p>我是p</p>
+        <span>qwe</span>
+        <p>pppppp</p>
+    </div> -->
+
+    <!-- <script>
+        var button = document.querySelector('button');
+        var div = document.querySelector('div');
+        //获取div中所有节点
+        var nodes = div.childNodes;
+        //给按钮添加点击事件
+        button.onclick = function () {
+            //遍历所有节点
+            for (var i = 0; i < nodes.length; i++) {
+                //判断nodeType如果是1， 代表是标签 还要判断nodeName是不是大写的P 
+                if (nodes[i].nodeType == 1 && nodes[i].nodeName == "P") {
+                    nodes[i].style.backgroundColor = "red";
+                }
+            }
+        }
+
+    </script> -->
+    <!-- <script>
+        //获取button和div
+        var button = document.querySelector('button');
+        var div = document.querySelector('div');
+        //获取div的所有节点
+        var nodes = div.childNodes;
+        //给按钮添加点击事件
+        button.onclick = function () {
+            //遍历所有节点
+            for (var i = 0; i < nodes.length; i++) {
+                //判断是不是标签
+                if (nodes[i].nodeType == 1 && nodes[i].nodeName == "P") {
+                    //如果是 添加背景色
+                    nodes[i].style.backgroundColor = "yellow";
+                }
+
+            }
+        }
+
+    </script> -->
+
+    <!-- <script>
+        var button = document.querySelector('button');
+        var div = document.querySelector('div');
+        var nodes = div.childNodes;
+        button.onclick = function () {
+            for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].nodeType == 1 && nodes[i].nodeName == "P") {
+                    nodes[i].style.backgroundColor = "blue";
+                }
+            }
+        }
+    </script> -->
+
+</body>
+
+</html>

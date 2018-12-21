@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            border: 1px solid red;
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- 1.点击超链接中的图片 切换图片 -->
+    <!-- 写一个超链接 -->
+    <!-- 在超链接中 添加一个img图片 -->
+    <!-- <a href="./京东.gif" id="link">
+    <img src="./naoke.jpg" alt="" id="imgs">
+</a>
+<script> -->
+    <!-- //获取两个元素 一个是超链接 一个是图片
+    var a = document.getElementById("link");
+    var img = document.getElementById("imgs");
+    //给图片添加点击事件 
+    img.onclick = function () {
+        //当点击的时候 把超链接中的href地址给img的src
+        img.src = a.href;
+        return false;
+        //如果一个超链接被点击了 会刷新页面 阻止刷新 return false;
+
+    }
+</script> -->
+
+    <!-- 2.点击按钮 显示从小图变为大图 -->
+    <!-- 写一个按钮 -->
+    <!-- <input type="button" value="点我查看大图" id="btn">
+<br> -->
+    <!-- 写一个img 放小图 -->
+    <!-- <img src="./京东.gif" alt="" id="imgs">
+<script>
+var oBtn = document.getElementById("btn");
+oBtn.onclick = function(){
+    // 给图片设置大图的地址
+    document.getElementById("imgs").src = "./naoke.jpg";
+}
+</script> -->
+
+    <!-- 3.点击按钮 修改单选框的值 -->
+    <!-- html -->
+    <!--写按钮 -->
+    <!-- <button id="btn">修改性别</button> -->
+    <!-- 写单选 -->
+    <!-- <label for="male">
+        <input type="radio" name="sex" id="male" value="1">男
+    </label>
+    <label for="female">
+        <input type="radio" name="sex" id="female" value="0">女
+    </label>
+
+    <script>
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = function () {
+            document.getElementById("female").checked = true;
+        }
+    </script> -->
+    <!-- 点击按钮 修改兴趣 -->
+    <!-- 写按钮 -->
+    <!-- <button id="btn">修改兴趣</button> -->
+    <!-- 写复选框 -->
+    <!-- <label for="basketball">
+     <input type="checkbox" name="hobby" id="basketball" value="1">打篮球
+ </label>
+ <label for="ymq">
+    <input type="checkbox" name="hobby" id="ymq" value="2">打羽毛球
+</label>
+<label for="pigpang">
+    <input type="checkbox" name="hobby" id="pigpang" value="3">打乒乓球
+</label>
+<label for="doudou">
+    <input type="checkbox" name="hobby" id="doudou" value="4">打豆豆
+</label>
+<script>
+var oBtn = document.getElementById("btn");
+oBtn.onclick = function(){
+    document.getElementById("ymq").checked = true;
+    document.getElementById("basketball").checked = false;
+}
+</script> -->
+
+    <!-- 点击按钮 选择一个 具体的选项 -->
+    <!-- <button id="btn">想要吃啥</button> -->
+    <!-- 写下拉菜单 -->
+    <!-- <select>
+        <option value="0">西红柿炒蛋1</option>
+        <option value="1">西红柿炒蛋2</option>
+        <option value="2">西红柿炒蛋3</option>
+        <option value="3" id="jd">西红柿炒蛋4</option>
+        <option value="4">西红柿炒蛋5</option>
+    </select>
+    <script>
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = function () {
+            document.getElementById("jd").selected = true;
+        }
+    </script> -->
+
+    <!-- 点击按钮 给div设置宽高和背景色 -->
+    <!-- html -->
+    <!-- <input type="button" value="设置" id="btn"> -->
+    <!-- 写一个div -->
+    <!-- <div id="box"></div> -->
+    <!-- js -->
+    <!-- <script>
+    var oBtn = document.getElementById("btn");
+    oBtn.onclick = function(){
+        // 获取div并且设置宽高背景色
+        var div = document.getElementById("box");
+        div.style.width = "200px";
+        div.style.height = "200px";
+        div.style.backgroundColor = "red";
+
+    }
+    </script> -->
+
+    <!-- 点击按钮 设置div隐藏 -->
+    <!-- <button id="btn">隐藏</button> -->
+    <!-- 写一个div -->
+    <!-- <div id="box"></div> -->
+    <!-- 给div设置css样式 -->
+    <!-- js -->
+    <!-- <script>
+        var oBtn = document.getElementById('btn');
+        var div = document.getElementById("box");
+        oBtn.onclick = function () {
+            div.style.display = "none";
+        }
+    </script> -->
+
+    <!-- 点击显示按钮 让div显示 点击隐藏按钮 让div隐藏 -->
+    <!-- <input type="button" value="显示" id="show">
+    <input type="button" value="隐藏" id="hide">
+    <div id="box"></div> -->
+    <!-- css -->
+    <!-- js -->
+    <!-- <script>
+        var show = document.getElementById("show");
+        var hide = document.getElementById("hide");
+        var div = document.getElementById("box"); -->
+    <!-- //给显示按钮添加点击事件
+        show.onclick = function () {
+            //让div显示
+            div.style.display = "block";
+        }
+        //给隐藏按钮添加点击
+        hide.onclick = function () {
+            //让div隐藏
+            div.style.display = "none";
+        }
+    </script> -->
+
+    <!-- 点击div设置你想要设置的样式 -->
+    <!-- html -->
+    <!-- <button id="btn">设置</button> -->
+    <!-- 写一个div -->
+    <!-- <div id="box"></div> -->
+    <!-- js -->
+    <!-- <script>
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = function () {
+            // 获取box,并且添加一个class
+            var div = document.getElementById("box");
+            div.className = "box";
+        }
+    </script> -->
+
+    <!-- 点击按钮 实现div的显示和隐藏两个功能 -->
+    <!-- 写一个按钮 -->
+    <!-- /<button id="btn">隐藏</button> -->
+    <!-- 写一个div -->
+    <!-- <div id="box"></div> -->
+    <!-- css -->
+    <!-- js -->
+    <!-- <script>
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = function () {
+            // 判断div是显示还是隐藏 如果是显示 让div显示 否则隐藏
+            if (this.innerText == "隐藏") {
+                document.getElementById("box").style.display = "none";
+                this.innerText = "显示";
+            } else {
+                document.getElementById("box").style.display = "block";
+                this.innerText = "隐藏";
+            }
+        }
+    </script>
+ -->
+
+ <!-- 点击一个按钮  实现网页颜色背景的黑白变化 简称为网页开关灯 -->
+ <!-- 写一个按钮 -->
+ <!-- <input type="button" value="关灯" id="btn">
+ <script>
+ var oBtn = document.getElementById("btn");
+ oBtn.onclick = function(){
+    //  判断是不是关灯 如果是显示黑色
+    if(this.value == "关灯"){
+        document.body.style.backgroundColor = "black";
+        this.value = "开灯";
+    }else{
+        document.body.style.backgroundColor = "white";
+        this.value = "关灯";
+    }
+ }
+ </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

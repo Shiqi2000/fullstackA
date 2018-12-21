@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="显示效果" id="btn">
+    <!-- <input type="button" value="干掉第一个子元素" id="btn2">
+    <input type="button" value="干掉所有子元素" id="btn3"> -->
+    <div id="dv"></div>
+    <!-- <script>
+        ////点击btn按钮 在div中插入多个按钮标签
+        //获取btn
+        var oBtn = document.querySelector('#btn');
+        var num = 0;
+        oBtn.onclick = function () {
+            num++;
+            //创建按钮标签
+            var btn = document.createElement('input');
+            //设置按钮的type属性
+            btn.type = "button";
+            //设置按钮的value属性 button1...button2...
+            btn.value = "按钮" + num;
+            //把按钮添加到div中
+            document.querySelector('#dv').appendChild(btn);
+        }
+        ////点击btn2的时候 干掉第一个子元素
+        //获取btn2
+        var oBtn2 = document.querySelector('#btn2');
+        //给btn2添加点击事件
+        oBtn2.onclick = function () {
+            //获取div
+            var div = document.querySelector('#dv');
+            //找到di中的第一个子元素 firstElementChild
+            //删除子元素
+            div.removeChild(div.firstElementChild);
+        }
+        ////点击btn3的时候 把div中的所有子元素都干掉
+        //获取btn3
+        var oBtn3 = document.querySelector("#btn3");
+        //添加点击事件
+        oBtn3.onclick = function () {
+            //获取div
+            var div = document.querySelector("#dv");
+            //用while循环 重复的循环 因为不知道什么时候没有元素 （for循环：知道循环次数）
+            while (div.firstElementChild) {
+                div.removeChild(div.firstElementChild);
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        //点击显示效果按钮 出现多个按钮标签
+        var num = 0;
+        //获取按钮
+        var oBtn = document.querySelector('#btn');
+        //给按钮添加点击事件
+        oBtn.onclick = function () {
+            num++;
+            //创建按钮标签
+            var btn = document.createElement('input');
+            //设置按钮type属性
+            btn.type = "button";
+            //设置按钮value属性
+            btn.value = "按钮" + num;
+            //把按钮添加到div中
+            document.querySelector('div').appendChild(btn);
+        }
+        /////点击btn2 
+        //获取btn2
+        var oBtn2 = document.querySelector("#btn2");
+        oBtn2.onclick = function () {
+            var div = document.querySelector("#dv");
+            div.removeChild(div.firstElementChild);
+        }
+        ////点击btn3
+        var oBtn3 = document.querySelector("#btn3");
+        oBtn3.onclick = function () {
+            var div = document.querySelector('#dv');
+            while (div.firstElementChild) {
+                div.removeChild(div.firstElementChild);
+            }
+        }
+
+    </script> -->
+
+    <!-- <script>
+        var num = 0;
+        var oBtn = document.querySelector("#btn");
+        oBtn.onclick = function () {
+            num++;
+            var btn = document.createElement('input');
+            btn.type = "button";
+            btn.value = "按钮" + num;
+            document.querySelector("div").appendChild(btn);
+        }
+        var oBtn2 = document.querySelector("#btn2");
+        oBtn2.onclick = function () {
+            var div = document.querySelector("#dv");
+            div.removeChild(div.firstElementChild);
+        }
+        var oBtn3 = document.querySelector("#btn3");
+        oBtn3.onclick = function () {
+            var div = document.querySelector("#dv");
+            while (div.firstElementChild) {
+                div.removeChild(div.firstElementChild);
+            }
+        }
+    </script> -->
+
+    <!-- 当div中有一个按钮 那就就不往div中添加按钮了 -->
+    <!-- <script>
+        //获取按钮btn
+        var oBtn = document.querySelector("#btn");
+        oBtn.onclick = function () {
+            if (document.querySelector("#btn2")) {
+                document.querySelector("#dv").removeChild(document.querySelector("#btn2"));
+            }
+            var btn2 = document.createElement("input");
+            btn2.type = "button";
+            btn2.value = "按钮2";
+            btn2.id = "btn2";
+            document.querySelector("#dv").appendChild(btn2);
+
+        }
+
+
+    </script> -->
+    <!-- <script>
+        var oBtn = document.querySelector("#btn");
+        oBtn.onclick = function () {
+            if (document.querySelector("#btn2")) {
+                document.querySelector("#dv").removeChild(document.querySelector("#btn2"));
+
+            }
+            var btn2 = document.createElement("input");
+            btn2.type = "button";
+            btn2.value = "按钮2";
+            btn2.id = "btn2";
+            document.querySelector("#dv").appendChild(btn2);
+        }
+
+
+    </script>
+    
+</body>
+
+</html>

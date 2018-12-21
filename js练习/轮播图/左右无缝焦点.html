@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 2.样式 -->
+    <style>
+        html,
+        body,
+        ul,
+        ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        .view {
+            position: relative;
+            margin: 50px auto;
+            width: 730px;
+            height: 454px;
+            overflow: hidden;
+        }
+
+
+        ul {
+            position: absolute;
+            width: calc(7 * 730px);
+        }
+
+        ul li {
+            float: left;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            color: #fff;
+            background-color: orange;
+            text-decoration: none;
+            font-size: 40px;
+            margin-top: -26px;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        ol {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+        }
+
+        ol li {
+            display: inline-block;
+            background-color: #fff;
+            margin: 0 2px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 22px;
+            cursor: pointer;
+        }
+
+        ol li.active {
+            background-color: steelblue;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="view">
+        <ul>
+            <li><a href="javascript:;"><img src="../image/1.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/2.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/3.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/4.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/5.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/6.jpg" alt=""></a></li>
+        </ul>
+        <!-- 左右按钮 -->
+        <a href="javascript:;" class="prev">《</a>
+        <a href="javascript:;" class="next">》</a>
+    </div>
+    <script src="../animate.js"></script>
+    <!-- <script>
+        //先做点击左右 完成无缝连接
+        //获取左边按钮
+        var prev = document.querySelector('.prev');
+        //获取右边按钮
+        var next = document.querySelector('.next');
+        //获取view
+        var view = document.querySelector('.view');
+        //获取view的宽度
+        var viewWidth = view.offsetWidth;
+        //获取ul
+        var ul = document.querySelector('ul');
+        //找到第一个li 添加到ul中的最后
+        var firstLi = document.querySelector('ul li:first-child');
+        //firstLi.cloneNode(true) true就是把自己里面的所有东西(包括所有子元素)都复制 false只复制自己
+        ul.appendChild(firstLi.cloneNode(true));
+        // 先克隆再获取所有li
+        var li = document.querySelectorAll('ul li');
+        var num = 0;
+        //点击左边按钮
+        prev.onclick = function () {
+            //判断是不是倒数第二个
+            if (num == li.length - 1) {
+                //如果是 让num = 0
+                num = 0;
+                //让ul瞬间移动到初始的0
+                ul.style.left = "0px";
+            }
+            //让num自增
+            num++;
+            //随着num自增 让ul移动
+            animate(ul, -num * viewWidth);
+        }
+
+
+        //点击右边按钮
+        next.onclick = function () {
+            //判断num是不是第一个
+            if (num == 0) {
+                //如果是第一个 回到倒数第二个
+                num = li.length - 1;
+                //让ul瞬间回到倒数第二个
+                ul.style.left = -num * viewWidth + 'px';
+
+            }
+            //自减
+            num--;
+            //随着num自减 让ul移动
+            animate(ul, -num * viewWidth);
+        }
+
+    </script> -->
+
+    <!-- <script>
+        //获取左边按钮
+        var prev = document.querySelector('.prev');
+        //获取右边按钮
+        var next = document.querySelector('.next');
+        //获取view
+        var view = document.querySelector('.view');
+        //获取view的宽度
+        var viewWidth = view.offsetWidth;
+        //获取ul
+        var ul = document.querySelector('ul');
+        //获取第一个li
+        var firstLi = document.querySelector('ul li:first-child');
+        //插入ul的最后面
+        ul.appendChild(firstLi.cloneNode(true));
+        //先克隆再获取所有li
+        var li = document.querySelectorAll('ul li');
+        var num = 0;
+        //点击左边按钮
+        prev.onclick = function () {
+            //判断num是不是倒数第二个
+            if (num == li.length - 1) {
+                //如果是 让num = 0
+                num = 0;
+                //让ul瞬间回到初始的0
+                ul.style.left = "0px";
+            }
+            //让num自增
+            num++;
+            //ul随之移动
+            animate(ul, - num * viewWidth);
+        }
+        //点击右边按钮
+        next.onclick = function () {
+            //判断num是不是等于0
+            if (num == 0) {
+                //如果是 让num = 倒数第二个值
+                num = li.length - 1;
+                //ul瞬间移动到倒数第二个
+                ul.style.left = -num * viewWidth + 'px';
+            }
+            //让num自减
+            num--;
+            //ul随之移动
+            animate(ul, -num * viewWidth);
+        }
+    </script> -->
+
+    <!-- <script>
+        //获取左边按钮
+        var prev = document.querySelector('.prev');
+        //获取右边按钮
+        var next = document.querySelector('.next');
+        //获取view
+        var view = document.querySelector('.view');
+        //获取view宽度
+        var viewWidth = view.offsetWidth;
+        //获取ul
+        var ul = document.querySelector('ul');
+        //找到第一个li 添加到ul中的最后
+        var firstLi = document.querySelector("ul li:first-child");
+        ul.appendChild(firstLi.cloneNode(true));
+        //先克隆完了 再获取所有li
+        var li = document.querySelectorAll('li');
+        //声明一个变量
+        var num = 0;
+        //点击左边按钮
+        prev.onclick = function () {
+            //判断是不是最后一张图片 
+            if (num == li.length - 1) {
+                //如果是 num = 0
+                num = 0;
+                //让ul瞬间回到初始的0
+                ul.style.left = 0 + 'px';
+
+            }
+            //让num自增
+            num++;
+            //随着num自增 ul随之移动
+            animate(ul, -num * viewWidth);
+        }
+
+        //点击右边按钮
+        next.onclick = function () {
+            //判断是不是第一个
+            if (num == 0) {
+                //如果是 回到最后一个
+                num = li.length - 1;
+                //让ul瞬间回到最后一个
+                ul.style.left = -num * viewWidth + 'px';
+            }
+
+            //让num自减
+            num--;
+            //随着num自减 ul随之移动
+            animate(ul, -num * viewWidth);
+        }
+
+    </script> -->
+
+    <!-- <script>
+        var prev = document.querySelector('.prev');
+        var next = document.querySelector('.next');
+        var view = document.querySelector('.view');
+        var viewWidth = view.offsetWidth;
+        var ul = document.querySelector('ul');
+        var firstLi = document.querySelector('ul li:first-child');
+        ul.appendChild(firstLi.cloneNode(true));
+        var li = document.querySelectorAll('li');
+        var num = 0;
+        prev.onclick = function () {
+            if (num == li.length - 1) {
+                num = 0;
+                ul.style.left = 0 + 'px';
+            }
+            num++;
+            animate(ul, -num * viewWidth);
+        }
+        next.onclick = function () {
+            if (num == 0) {
+                num = li.length - 1;
+                ul.style.left = -num * viewWidth + 'px';
+            }
+            num--;
+            animate(ul, -num * viewWidth);
+        }
+    </script> -->
+
+    <!-- <script>
+        var prev = document.querySelector(".prev");
+        var next = document.querySelector('.next');
+        var view = document.querySelector('.view');
+        var viewWidth = view.offsetWidth;
+        var ul = document.querySelector('ul');
+        var firstLi = document.querySelector('ul li:first-child');
+        ul.appendChild(firstLi.cloneNode(true));
+        var li = document.querySelectorAll('li');
+        var num = 0;
+        prev.onclick = function () {
+            if (num == li.length - 1) {
+                num = 0;
+                ul.style.left = 0 + 'px';
+            }
+            num++;
+            animate(ul, -num * viewWidth);
+        }
+        next.onclick = function () {
+            if (num == 0) {
+                num = li.length - 1;
+                ul.style.left = -num * viewWidth + 'px';
+            }
+            num--;
+            animate(ul, -num * viewWidth);
+        }
+    </script> -->
+
+    <script>
+        var prev = document.querySelector('.prev');
+        var next = document.querySelector('.next');
+        var view = document.querySelector('.view');
+        var viewWidth = view.offsetWidth;
+        var ul = document.querySelector('ul');
+        var firstLi = document.querySelector('ul li:first-child');
+        ul.appendChild(firstLi.cloneNode(true));
+        var li = document.querySelectorAll('li');
+        var num = 0;
+        prev.onclick = function () {
+            if (num == li.length - 1) {
+                num = 0;
+                ul.style.left = 0 + 'px';
+            }
+            num++;
+            animate(ul, -num * viewWidth);
+        }
+        next.onclick = function () {
+            if (num == 0) {
+                num = li.length - 1;
+                ul.style.left = -num * viewWidth + 'px';
+            }
+            num--;
+            animate(ul, -num * viewWidth);
+        }
+    </script>
+</body>
+
+</html>

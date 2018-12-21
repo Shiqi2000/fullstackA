@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-image: url("./1.jpg");
+        }
+
+        #mask {
+            background-color: rgba(255, 255, 255, 0.3);
+            height: 200px;
+            text-align: center;
+        }
+
+        #mask img {
+            width: 200px;
+            margin-top: 35px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 节点操作隔行变色
+    <button>按钮</button>
+    <ul>
+        <li>hahahah</li>
+        <li>哈哈哈</li>
+        <li>asdf</li>
+        <li>吼吼吼</li>
+        <li>43rtgbfx</li>
+        <li>华为hi和</li>
+    </ul>
+
+    <script>
+        //获取按钮
+        var oBtn = document.querySelector('button');
+        //给按钮添加点击事件
+        oBtn.onclick = function () {
+            //获取ul中的所有子节点
+            var ul = document.querySelector('ul');
+            var nodes = ul.childNodes;
+            //声明一个变量 用来计数 
+            var count = 0;
+            //遍历所有子节点
+            for (var i = 0; i < nodes.length; i++) {
+                //判断该节点是不是标签 且是不是li
+                if (nodes[i].nodeType == 1 && nodes[i].nodeName == "LI") {
+                    //用count对2取模 如果整除 就是红色 否则粉色
+                    var result = count % 2 == 0 ? "red" : "pink";
+                    //把这个颜色给对应的节点
+                    nodes[i].style.backgroundColor = result;
+                    count++;
+                }
+            }
+        }
+    </script> -->
+
+    <!-- <button>按钮</button>
+    <div></div>
+    <script>
+        var oBtn = document.querySelector("button");
+        oBtn.onclick = function () {
+            var span = document.createElement('span');
+            span.innerHTML = "helloworld";
+            // document.querySelector('div').appendChild(span);
+            // document.body.appendChild(span);
+         
+        }
+
+    </script> -->
+
+    <!-- 节点操作隔行变色 -->
+    <!-- <button>变色</button>
+    <ul>
+        <li>刘杰</li>
+        <li>王永红</li>
+        <li>21</li>
+        <li>18</li>
+        <li>爱王永红</li>
+        <li>爱刘杰</li>
+    </ul>
+    <script>
+        //获取按钮
+        var button = document.querySelector('button');
+        //给按钮添加点击事件
+        button.onclick = function () {
+            //获取ul的所有节点
+            var ul = document.querySelector('ul');
+            var nodes = ul.childNodes;
+            //声明一个变量 用来计数 
+            var cont = 0;
+            //遍历所有节点
+            for (var i = 0; i < nodes.length; i++) {
+                //判断该节点是不是标签 且是不是li
+                if (nodes[i].nodeType == 1 && nodes[i].nodeName == 'LI') {
+                    //用cont取模于2 如果整除 红色 反之  绿色
+                    var result = cont % 2 == 0 ? "red" : "yellow";
+                    //把这个颜色给对应的节点就可以了
+                    nodes[i].style.backgroundColor = result;
+                    cont++;
+                }
+            }
+        }
+    </script> -->
+
+    <!-- 节点隔行变色 -->
+    <!-- <button>隔行变色</button>
+    <ul>
+        <li>hahah</li>
+        <li>哈哈哈</li>
+        <li>houhou</li>
+        <li>吼吼吼</li>
+        <li>heihei</li>
+        <li>嘿嘿嘿</li>
+    </ul>
+    <script>
+        var button = document.querySelector('button');
+        button.onclick = function () {
+            var ul = document.querySelector('ul');
+            var nodes = ul.childNodes;
+            var cont = 0;
+            for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].nodeType == 1 && nodes[i].nodeName == "LI") {
+                    var result = cont % 2 == 0 ? "red" : "pink";
+                    nodes[i].style.backgroundColor = result;
+                    cont++;
+                }
+            }
+        }
+
+
+    </script> -->
+    <!-- <div id="mask">
+        <img src="./1.jpg" alt="">
+        <img src="./2.jpg" alt="">
+        <img src="./3.jpg" alt="">
+    </div>
+    <script>
+
+        //获取所有img
+        var img = document.querySelector('#mask').children;
+        //遍历
+        for (var i = 0; i < img.length; i++) {
+            //给img点击属性
+            img[i].onclick = function () {
+                //把img的src属性给body
+                document.body.style.backgroundImage = "url(" + this.src + ")";
+            }
+        }
+
+    </script> -->
+
+    <!-- <div id="mask">
+        <img src="./1.jpg" alt="">
+        <img src="./2.jpg" alt="">
+        <img src="./3.jpg" alt="">
+    </div>
+    <script>
+        var img = document.querySelector('#mask').children;
+        for (var i = 0; i < img.length; i++) {
+            img[i].onclick = function () {
+                document.body.style.backgroundImage = "url(" + this.src + ")";
+            }
+        }
+
+    </script> -->
+</body>
+
+</html>

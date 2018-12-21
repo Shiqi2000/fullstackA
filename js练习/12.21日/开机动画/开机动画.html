@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 322px;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            /* overflow: hidden; */
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box">
+        <span id="close-button"></span>
+        <div id="head-part">
+            <img src="./image/t.jpg" alt="">
+        </div>
+        <div id="bottom-part">
+            <img src="./image/b.jpg" alt="">
+        </div>
+    </div>
+    <script src="./animate.js"></script>
+    <script>
+        // //获取元素
+        // var box = document.querySelector('.box');
+        // var span = document.querySelector('span');
+        // var bottomPart = document.querySelector('#bottom-part');
+        // //给span添加点击事件
+        // span.onclick = function () {
+        //     //给bottom-part高度变0 让box的宽度变为0
+        //     animate(bottomPart, { 'height': 0 }, function () {
+        //         animate(box, { 'width': 0 })
+        //     })
+        // }
+
+        var box = document.querySelector('.box');
+        var span = document.querySelector('span');
+        var bottomPart = document.querySelector('#bottom-part');
+        span.onclick = function () {
+            animate(bottomPart, { 'height': 0 }, function () {
+                animate(box, { 'widht': 0 })
+            })
+        }
+    </script>
+</body>
+
+</html>

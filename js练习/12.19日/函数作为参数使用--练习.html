@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 使用数字作为参数
+
+        var fn = function (a, b) {
+            var c = a + b;
+            console.log(c);
+        }
+
+        fn(1, 2);  //3
+
+
+        // 使用字符串作为参数
+
+        var fn = function (a, b) {
+            var c = a + b;
+            console.log(c);
+        }
+
+        fn("hello,", "world");  //hello,world
+
+
+        // 使用布尔值作为参数
+
+        var fn = function (a) {
+            return a;
+        }
+
+        console.log(fn(true));  //true
+
+        // 使用undefined作为参数
+
+        var fn = function (a) {
+            return a;
+        }
+
+        console.log(fn(undefined));  //undefined
+
+
+        //使用函数作为参数
+        var fn = function (a) {
+        // a();相当于调用函数了
+            a();
+        }
+
+        var a = function () { console.log("我是函数哦") }
+        a();
+        fn(function () { console.log("我是函数哦") });
+
+
+// 如果一个函数作为另外一个函数的参数 那么这个函数叫做另外一个函数的回调函数
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 2.css */
+        /* 2.0 设置body的样式 */
+        html,body{
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        /* 2.1 设置tab的样式 */
+        .tab{
+            position: relative;
+            width: 400px;
+            height: 250px;
+            margin: 100px auto;
+            background-color: #ffffff;
+        }
+        /* 2.2 设置nav的样式 */
+        .nav{
+            width: 100%;
+            height: 40px;
+            overflow: hidden;
+        }
+        .nav a{
+            text-decoration: none;
+            float: left;
+            display: block;
+            width: 25%;
+            height: 100%;
+            background-color: #c0dcc0;
+            text-align: center;
+            line-height: 40px;
+            color: #333333;
+            border-right: 1px solid #ffffff;
+            box-sizing: border-box;
+        }
+        .nav a:last-child{
+            border-right: none;
+        }
+        /* 2.3 设置内容的样式 */
+        .section{
+            display: none;
+            position: absolute;
+            top: 40px;
+        }
+        li{
+            line-height: 30px;
+        }
+        .nav .active{
+            background-color: #9baf9b;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1.html -->
+    <!-- 1.1 tab切换 总的div -->
+    <div class="tab">
+        <!-- 1.1.1 tab中的导航 -->
+        <div class="nav">
+            <!-- 1.1.1.1 4个a标签 -->
+            <!-- href="javascript:;" 阻止跳转 -->
+            <a href="javascript:;" cont="gn" class="active">国内新闻</a>
+            <a href="javascript:;" cont="gj">国际新闻</a>
+            <a href="javascript:;" cont="ty">体育新闻</a>
+            <a href="javascript:;" cont="yl">娱乐新闻</a>
+
+        </div>
+
+        <!-- 1.1.2 tab中的内容 -->
+        <div class="concent">
+            <!-- 1.1.2.1 tab中的内容有四个 -->
+            <div class="section" id="gn" style="display:block;">
+                <!-- 1.1.2.1.1 每个内容有ol li -->
+                <ol>
+                    <li>河南再次发生矿难,死伤人数超过1个人</li>
+                    <li>禽流感在全国蔓延,温家宝指示</li>
+                    <li>南方大旱,农作物减产绝收面积上亩</li>
+                    <li>猪流感在广东群体性爆发</li>
+                    <li>禽流感在全国蔓延</li>
+                    <li>猪流感在广东群</li>
+                </ol>
+            </div>
+            <div class="section" id="gj">
+                <!-- 1.1.2.1.1 每个内容有ol li -->
+                <ol>
+                    <li>河南再次发生矿难,死伤人数超过1个人aaaaa</li>
+                    <li>禽流感在全国蔓延,温家宝指示aaaaa</li>
+                    <li>南方大旱,农作物减产绝收面积上亩aaaaaa</li>
+                    <li>猪流感在广东群体性爆发aaaaaaaa</li>
+                    <li>禽流感在全国蔓延aaaaaa</li>
+                    <li>猪流感在广东群aaaaa</li>
+                </ol>
+            </div>
+            <div class="section" id="ty">
+                <!-- 1.1.2.1.1 每个内容有ol li -->
+                <ol>
+                    <li>河南再次发生矿难,死伤人数超过1个人bbbbbbb</li>
+                    <li>禽流感在全国蔓延,温家宝指示bbbbb</li>
+                    <li>南方大旱,农作物减产绝收面积上亩bbbbb</li>
+                    <li>猪流感在广东群体性爆发bbbb</li>
+                    <li>禽流感在全国蔓延bbbb</li>
+                    <li>猪流感在广东群bbbb</li>
+                </ol>
+            </div>
+            <div class="section" id="yl">
+                <!-- 1.1.2.1.1 每个内容有ol li -->
+                <ol>
+                    <li>河南再次发生矿难,死伤人数超过1个人cccccc</li>
+                    <li>禽流感在全国蔓延,温家宝指示ccccc</li>
+                    <li>南方大旱,农作物减产绝收面积上亩ccccc</li>
+                    <li>猪流感在广东群体性爆发ccccc</li>
+                    <li>禽流感在全国蔓延ccccc</li>
+                    <li>猪流感在广东群cccccc</li>
+                </ol>
+            </div>
+
+        </div>
+
+    </div>
+<!-- js -->
+<script>
+//前提: 在nav的a中添加自定义属性 在section中添加id a中的自定义属性要和section中的id一样
+//1.获取所有a标签
+var a = document.querySelectorAll('.nav a');
+//2.遍历每个a标签
+for(var i = 0; i < a.length; i++){
+    //3.给a标签添加点击事件
+    a[i].onclick = function(){
+        //4.让a标签对应的section让他隐藏  让有active的a标签没有active
+        //4.1 获取含有active的class的a标签
+        var active = document.querySelector('.active');
+        //4.2 获取上面a标签身上的ceont属性 的值
+        var cont = active.getAttribute('cont');
+        //4.3 通过上面获取的值 找到对应的section 让他隐藏
+        document.getElementById(cont).style.display = "none";
+        //4.4 移除a标签上的active类名
+        active.removeAttribute('class');
+        //5.让点击的那个a标签加一个active的class 让点击的那个a标签对应的那个section显示
+        //5.1 给点击的那个a标签设置一个class为active
+        this.className = "active";
+        //5.2 获取点击的那个a标签上的cont的值
+        var cont = this.getAttribute('cont');
+        //5.3 根据cont值获取对应的section 让显示
+        document.getElementById(cont).style.display = 'block';
+    }
+}
+</script>
+</body>
+
+</html>

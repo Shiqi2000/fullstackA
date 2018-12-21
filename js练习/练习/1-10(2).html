@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- 点击超链接中的图片 切换图片 -->
+    <!-- <a href="./naoke.jpg" id="link">
+    <img src="./京东.gif" alt="" id="imgs"></a>
+    <script>
+    var a = document.getElementById("link");
+    var img = document.getElementById("imgs");
+    img.onclick = function(){
+        img.src = a.href;
+        return false;
+    }
+    </script> -->
+
+    <!-- 点击按钮 显示从小图变为大图 -->
+    <!-- <input type="button" value="点我看大图" id="btn">
+    <br>
+    <img src="./京东.gif" alt="" id="imgs">
+    <script>
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = function () {
+            document.getElementById("imgs").src = "./naoke.jpg";
+        }
+    </script> -->
+
+    <!-- 点击按钮 修改单选框的值 -->
+    <!-- <button id="btn">修改性别</button> -->
+    <!-- 写单选 -->
+    <!-- <label for="male">
+        <input type="radio" name="sex" id="male" value="1">男
+    </label>
+    <label for="female">
+        <input type="radio" name="sex" id="female" value="0">女
+    </label> -->
+    <!-- js -->
+    <!-- <script>
+    // 获取按钮
+    var oBtn= document.getElementById("btn");
+    // 给按钮添加点击属性
+    oBtn.onclick = function(){
+        // 获取要选中的值
+        document.getElementById("male").checked = true;
+    }
+    
+    </script> -->
+
+
+    <!-- 点击按钮 修改兴趣 复选框 -->
+    <!-- html -->
+    <!-- 按钮 -->
+    <!-- <input type="button" value="修改兴趣" id="btn"> -->
+    <!-- 复选框 -->
+    <!-- <label for="bask">
+        <input type="checkbox" name="hobby" id="bask" value="1">打篮球
+    </label>
+    <label for="ymq">
+        <input type="checkbox" name="hobby" id="ymq" value="2">打羽毛球
+    </label>
+    <label for="pp">
+        <input type="checkbox" name="hobby" id="pp" value="3">打乒乓球
+    </label>
+    <label for="dd">
+        <input type="checkbox" name="hobby" id="dd" value="4">打豆豆
+    </label> -->
+    <!-- js -->
+    <!-- <script>
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = function () {
+            document.getElementById("ymq").checked = true;
+            document.getElementById("pp").checked = false;
+        }
+
+    </script> -->
+
+    <!-- 点击按钮 选择一个具体的选项 -->
+    <!-- 按钮 -->
+    <!-- <button id="btn">想要吃啥</button> -->
+    <!-- 下拉列表 -->
+    <!-- <select>
+        <option value="1">刘杰大猪蹄1</option>
+        <option value="2">刘杰大猪蹄2</option>
+        <option value="3">刘杰大猪蹄3</option>
+        <option value="4">刘杰大猪蹄4</option>
+        <option value="5" id="xx">刘杰大猪蹄5</option>
+        <option value="6">刘杰大猪蹄6</option>
+    </select> -->
+    <!-- js -->
+    <!-- <script>
+    var oBtn = document.getElementById("btn");
+    oBtn.onclick = function(){
+        // 获取要被选中的值
+        document.getElementById('xx').selected = true;
+    }
+    </script> -->
+
+    <!-- 点击按钮 给div设置宽高背景色 -->
+    <!-- <button id="btn">设置</button>
+    <div id="box"></div>
+    <script>
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = function () {
+            var div = document.getElementById("box");
+            div.style.width = "200px";
+            div.style.height = "200px";
+            div.style.backgroundColor = "yellow";
+        }
+    </script> -->
+
+    <!-- 点击按钮 设置div隐藏 -->
+    <!-- <button id="btn">隐藏</button>
+    <div id="box"></div>
+    <script>
+        var oBtn = document.getElementById("btn");
+        var div = document.getElementById('box');
+        oBtn.onclick = function () {
+            div.style.display = "none";
+        }
+    </script> -->
+
+    <!-- 点击显示按钮 让div显示 点击隐藏 让div隐藏 -->
+    <!-- <button id="show">显示</button>
+    <button id="hide">隐藏</button>
+    <div id="box"></div>
+    <script>
+        var show = document.getElementById("show");
+        var hide = document.getElementById("hide");
+        var div = document.getElementById("box");
+        show.onclick = function () {
+            div.style.display = "block";
+        }
+        hide.onclick = function () {
+            div.style.display = "none";
+        }
+    </script> -->
+
+    <!-- 点击div设置你想要设置的样式 -->
+    <!-- <button id="btn">设置</button>
+    <div id="box"></div>
+    <script>
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = function () {
+            var div = document.getElementById("box");
+            div.className = "box";
+        }
+
+    </script> -->
+
+    <!-- 点击一个按钮 实现div的显示和隐藏 -->
+    <!-- <button id="btn">隐藏</button>
+    <div id="box"></div>
+    <script>
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = function () {
+            if (this.innerText == "隐藏") {
+                document.getElementById("box").style.display = "none";
+                this.innerText = "显示";
+            } else {
+                document.getElementById("box").style.display = "block";
+                this.innerText = "隐藏";
+            }
+        }
+
+    </script> -->
+
+    <!-- 网页开关灯 -->
+    <!-- 按钮 -->
+    <!-- <input type="button" value="关灯" id="btn">
+    <script>
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = function () {
+            if (this.value == "关灯") {
+                document.body.style.backgroundColor = "black";
+                this.value = "开灯";
+            } else {
+                document.body.style.backgroundColor = "white";
+                this.value = "关灯";
+            }
+        }
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .main {
+            margin: 0 auto;
+            /* width: 1000px; */
+            margin-top: 10px;
+
+        }
+
+        .fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top" id="topPart">
+        <img src="../images/top.png" alt="">
+    </div>
+    <div class="nav" id="navBar">
+        <img src="../images/nav.png" alt="">
+    </div>
+    <div class="main" id="mainPart">
+        <img src="../images/main.png" alt="">
+    </div>
+
+    <!-- <script>
+        //获取顶部
+        var topPart = document.querySelector('#topPart');
+        //获取导航
+        var navBar = document.querySelector('#navBar');
+        //获取其他
+        var mainPart = document.querySelector('#mainPart');
+        //给window添加onscroll
+        window.onscroll = function () {
+            //判断一下 滚动出去的距离是不是大于topPart的高度
+            if (getScroll().top >= topPart.offsetHeight) {
+                //如果是 让navBar固定
+                navBar.className = "nav fixed";
+                //让mainPart的marginTop为navBar的高度
+                mainPart.style.marginTop = navBar.offsetHeight + 'px';
+            } else {
+                //否则 让nav不固定
+                navBar.className = "nav";
+                //去除mainPart的marginTop为navBar的高度
+                mainPart.style.marginTop = 10 + 'px';
+            }
+        }
+
+
+        function getScroll() {
+            return {
+                left: window.pageXoffset || document.documentElement.scrollLeft || window.document.body.scrollLeft || 0,
+                top: window.pageYoffset || document.documentElement.scrollTop || window.document.body.scrollTop || 0
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        var topPart = document.querySelector('#topPart');
+        var navBar = document.querySelector('#navBar');
+        var mainPart = document.querySelector('#mainPart');
+        window.onscroll = function () {
+            if (getScroll().top >= topPart.offsetHeight) {
+                navBar.className = 'nav fixed';
+                mainPart.style.marginTop = navBar.offsetHeight + 'px';
+            } else {
+                navBar.className = 'nav';
+                mainPart.style.marginTop = 10 + 'px';
+            }
+        }
+
+        function getScroll() {
+            return {
+                left: window.pageXoffset || document.documentElement.scrollLeft || window.document.body.scrollLeft || 0,
+                top: window.pageYoffset || document.documentElement.scrollTop || window.document.body.scrollTop || 0
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        //顶部导航案例
+        var topPart = document.querySelector('#topPart');
+        var navBar = document.querySelector('#navBar');
+        var mainPart = document.querySelector('#mainPart');
+        window.onscroll = function () {
+            if (getScroll().top >= topPart.offsetHeight) {
+                navBar.className = "nav fixed";
+                mainPart.style.marginTop = navBar.offsetHeight + 'px';
+            } else {
+                navBar.className = "nav";
+                mainPart.style.marginTop = 10 + 'px';
+            }
+        }
+        function getScroll() {
+            return {
+                left: window.pageXoffset || document.documentElement.scrollLeft || window.document.body.scrollLeft || 0,
+                top: window.pageYoffset || document.documentElement.scrollTop || window.document.body.scrollTop || 0
+            }
+        }
+    </script> -->
+
+    <script>
+        var topPart = document.querySelector('#topPart');
+        var navBar = document.querySelector('#navBar');
+        var mainPart = document.querySelector('#mainPart');
+        window.onscroll = function () {
+            if (getScroll().top > topPart.offsetHeight) {
+                navBar.className = "nav fixed";
+                mainPart.style.marginTop = navBar.offsetHeight + 'px';
+            } else {
+                navBar.className = "nav";
+                mainPart.style.marginTop = 10 + 'px';
+            }
+        }
+        function getScroll() {
+            return {
+                left: window.pageXoffset || document.documentElement.scrollLeft || window.document.body.scrollLeft || 0,
+                top: window.pageYoffset || document.documentElement.scrollTop || window.document.body.scrollTop || 0
+            }
+        }
+    </script>
+</body>
+
+</html>

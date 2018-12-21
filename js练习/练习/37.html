@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: rebeccapurple;
+        margin: 20px auto;
+        overflow-y: auto;
+    }
+    </style> -->
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .main {
+            margin: 0 auto;
+            /* width: 1000px; */
+            margin-top: 10px;
+
+        }
+
+        .fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style> -->
+    <!-- <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            left: 130px;
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- scorll系列 -->
+    <!-- <div class="box">
+    我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，我的小羊在睡觉，
+   </div> -->
+    <!-- <script>
+   var box = document.querySelector('.box');
+   //获取元素的宽 高 左边距离 顶部距离
+//    console.log(box.offsetWidth);
+//    console.log(box.offsetHeight);
+//    console.log(box.offsetLeft);
+//    console.log(box.offsetTop);
+   //scorll 滚动
+   //onscorll 当滚动条滚动的时候 不停的触发
+   box.onscroll = function(){
+       console.log(box.scrollTop); //滚出去的距离
+       console.log(box.scrollHeight); //内容的高度 超出的时候
+   }
+   </script> -->
+    <!-- <div class="top" id="topPart">
+        <img src="./images/top.png" alt="" />
+    </div>
+    <div class="nav" id="navBar">
+        <img src="./images/nav.png" alt="" />
+    </div>
+    <div class="main" id="mainPart">
+        <img src="./images/main.png" alt="" />
+    </div> -->
+
+
+    <!-- <div></div> -->
+
+    <!-- <script>
+        //获取顶部topPart
+        var topPart = document.querySelector('#topPart');
+        //获取导航navBar
+        var navBar = document.querySelector('#navBar');
+        //获取其他mainPart
+        var mainPart = document.querySelector('#mainPart');
+        //给window添加onscroll事件
+        window.onscroll = function () {
+            //判断一下滚动出去的距离 是不是大于 topPart的高度
+            if (window.document.body.scrollTop >= topPart.offsetHeight) {
+                //如果是 让nav固定
+                navBar.className = 'nav fixed';
+                //让main的marginTop为nav的高度
+                mainPart.style.marginTop = navBar.offsetHeight + 'px';
+            } else {
+                //否则 让nav不固定
+                navBar.className = "nav";
+                //去除main的marginTop为nav的高度
+                mainPart.style.marginTop = 10 + 'px';
+            }
+        }
+    </script> -->
+    <!-- <script>
+        var box = document.querySelector('div');
+        console.log(box.currentStyle.left);
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 2.样式 -->
+    <style>
+        html,
+        body,
+        ul,
+        ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        .view {
+            position: relative;
+            margin: 50px auto;
+            width: 730px;
+            height: 454px;
+            overflow: hidden;
+        }
+
+
+        ul {
+            position: relative;
+            width: calc(7 * 730px);
+        }
+
+        ul li {
+            float: left;
+        }
+    </style>
+    </head>
+
+    <body>
+        <!-- 1.html -->
+        <!-- 1.1 观察口 -->
+        <div class="view">
+            <!-- 1.1.1 ul -->
+            <ul>
+                <!-- 1.1.1.1  li a 有几个图片 就有几个li 并且li横着排的 -->
+                <li><a href="javascript:;"><img src="../image/1.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="../image/2.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="../image/3.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="../image/4.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="../image/5.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="../image/6.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="../image/1.jpg" alt=""></a></li>
+            </ul>
+        </div>
+
+        <script src="../animate.js"></script>
+        <!-- <script>
+            //获取view元素
+            var view = document.querySelector('.view');
+            var viewWidth = view.offsetWidth;
+            //获取ul
+            var ul = document.querySelector('ul');
+            //获取所有li
+            var li = document.querySelectorAll('ul li');
+            //定义一个自增变量
+            var num = 0;
+            //定义一个定时器
+            var timer = setInterval(function () {
+                //判断是不是最后一个图片
+                if (num == li.length - 1) {
+                    //如果是 那么回到第0个 让num = 0
+                    num = 0;
+                    //让ul的移动位置 变成最初的位置 0
+                    ul.style.left = "0px"; //瞬间到第0个
+                    //animate(ul,0) //慢慢到第0个
+                }
+                //让自增变量自增
+                num++;
+                //让ul移动 -自增变量*每张图的宽度
+                animate(ul, - num * viewWidth);
+            }, 2000)
+        </script> -->
+
+        <!-- <script>
+            //获取view
+            var view = document.querySelector('.view');
+            //获取每张图片的宽度
+            var viewWidth = view.offsetWidth;
+            //获取ul
+            var ul = document.querySelector('ul');
+            //获取所有li
+            var li = document.querySelectorAll('ul li');
+            //声明一个变量
+            var num = 0;
+            //声明一个定时器
+            var timer = setInterval(function () {
+                //判断是不是最后一张图片
+                if (num == li.length - 1) {
+                    //如果是 呢么回到第0个 让num= 0
+                    num = 0;
+                    //让ul移动的位置 变成最初的位置
+                    ul.style.left = "0px";
+                }
+                //让自增变量自增
+                num++;
+                //让ul移动 自增变量*每张图的宽度
+                animate(ul, -num * viewWidth);
+            }, 2000)
+        </script> -->
+
+
+        <!-- <script>
+            var view = document.querySelector('.view');
+            var viewWidth = view.offsetWidth;
+            var ul = document.querySelector('ul');
+            var li = document.querySelectorAll('li');
+            var num = 0;
+            var timer = setInterval(function () {
+                if (num == li.length - 1) {
+                    num = 0;
+                    ul.style.left = 0 + "px";
+                }
+                num++;
+                animate(ul, -num * viewWidth);
+            }, 2000)
+        </script> -->
+
+
+        <!-- <script>
+            //获取view元素
+            var view = document.querySelector('.view');
+            //获取view元素的宽度
+            var viewWidth = view.offsetWidth;
+            //获取ul
+            var ul = document.querySelector('ul');
+            //获取所有li
+            var li = document.querySelectorAll('li');
+            //声明变量
+            var num = 0;
+            //声明一个定时器
+            var timer = setInterval(function () {
+                //判断是不是最后一张图片
+                if (num == li.length - 1) {
+                    //如果是 num = 0
+                    num = 0;
+                    //ul瞬间回到初始的0
+                    ul.style.left = 0 + "px";
+                }
+
+                //让num自增
+                num++;
+                //ul移动
+                animate(ul, -num * viewWidth);
+            }, 2000)
+
+        </script> -->
+
+        <!-- <script>
+            var view = document.querySelector('.view');
+            var viewWidth = view.offsetWidth;
+            var ul = document.querySelector('ul');
+            var li = document.querySelectorAll('li');
+            var num = 0;
+            var timer = setInterval(function () {
+                if (num == li.length - 1) {
+                    num = 0;
+                    ul.style.left = 0 + 'px';
+                }
+                num++;
+                animate(ul, -num * viewWidth);
+            }, 1500)
+        </script> -->
+
+        <!-- <script>
+            var view = document.querySelector('.view');
+            var viewWidth = view.offsetWidth;
+            var ul = document.querySelector('ul');
+            var li = document.querySelectorAll('li');
+            var num = 0;
+            var timer = setInterval(function () {
+                if (num == li.length - 1) {
+                    num = 0;
+                    ul.style.left = 0 + "px";
+                }
+                num++;
+                animate(ul, -num * viewWidth);
+            }, 1500)
+        </script> -->
+
+        <!-- <script>
+            var view = document.querySelector('.view');
+            var viewWidth = view.offsetWidth;
+            var ul = document.querySelector('ul');
+            var li = document.querySelectorAll('li');
+            var num = 0;
+            var timer = setInterval(function () {
+                if (num == li.length - 1) {
+                    num = 0;
+                    ul.style.left = 0 + "px";
+
+                }
+                num++;
+                animate(ul, -num * viewWidth);
+            }, 1500)
+        </script> -->
+    </body>
+
+</html>

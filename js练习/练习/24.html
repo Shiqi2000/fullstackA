@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* .box {
+            position: fixed;
+            right: 0px;
+            top: 50%;
+        }
+
+        .box a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-image: url(./bgs.png);
+            background-position: -158px -51px;
+            background-repeat: no-repeat;
+        }
+
+        .box img {
+            position: absolute;
+             top: -48px;
+             left: -158px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        } */
+        /* div{
+            width: 200px;
+            height: 200px;
+            background-color: blanchedalmond;
+            margin-left: 10px;
+            float: left;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- 点击按钮禁用文本框 -->
+    <!-- <button id="btn">禁用文本框</button>
+    <input type="text" id="input" >
+    <script>
+    var oBtn = document.getElementById("btn");
+    var input = document.getElementById("input");
+    oBtn.onclick = function(){
+input.disabled = true;
+    }
+    </script> -->
+
+    <!-- <button id="btn">按钮</button>
+    <input type="text" name="" id="txt">
+    <script>
+    var oBtn = document.getElementById("btn");
+    var input = document.getElementById("txt");
+    oBtn.onclick = function(){
+        input.disabled = true;
+    }
+    </script> -->
+
+    <!-- 点击按钮修改列表背景颜色 -->
+    <!-- <button id="btn">按钮</button>
+    <ul>
+        <li>刘杰</li>
+        <li>大猪蹄子</li>
+        <li>猪头</li>
+    </ul>
+    <script>
+    var oBtn = document.getElementById("btn");
+    oBtn.onclick = function(){
+        var ul = document.getElementsByTagName("ul")[0];
+        ul.style.backgroundColor = "red";
+    }
+    </script> -->
+    <!-- <button id="btn">按钮</button>
+    <ul>
+        <li>刘杰</li>
+        <li>王永红</li>
+        <li>哈哈</li>
+    </ul>
+    <script>
+    var oBtn = document.getElementById("btn");
+    oBtn.onclick = function(){
+        var ul = document.getElementsByTagName("ul")[0];
+        ul.style.backgroundColor = "yellow";
+    }
+    
+    </script> -->
+
+    <!-- 案例表格隔行变色 -->
+    <!-- <table border="1" cellspacing = "0">
+        <tr>
+            <td>dv</td>
+            <td>dfgb</td>
+            <td>ef</td>
+        </tr>
+        <tr>
+            <td>df</td>
+            <td>dfdx</td>
+            <td>df</td>
+        </tr>
+        <tr>
+            <td>gfd</td>
+            <td>dfg</td>
+            <td>gxg</td>
+        </tr>
+    </table> -->
+    <!-- <script>
+    var tr = document.getElementsByTagName("tr");
+    for(var i = 0 ; i< tr.length; i++){
+    if(i % 2 == 0){
+        tr[i].style.backgroundColor = "red";
+    }else{
+        tr[i].style.backgroundColor = "blue";
+    }
+    }
+    
+    </script> -->
+
+    <!-- <script>
+    var tr = document.getElementsByTagName("tr");
+    for(var i = 0; i <tr.length; i++){
+        if(i % 2 == 0){
+            tr[i].style.backgroundColor = "yellow";
+        } else{
+            tr[i].style.backgroundColor = "red";
+        }
+    }
+        </script> -->
+
+    <!-- liebiaoxiang的高亮显示 -->
+    <!-- <ul>
+        <li>dfgh</li>
+        <li>dfggh</li>
+        <li>fghju</li>
+        <li>mnbvc</li>
+        <li>hgf</li>
+    </ul> -->
+    <!-- <script>
+        var li = document.getElementsByTagName("li");
+        for (var i = 0; i < li.length; i++) {
+            li[i].onmouseover = function () {
+                for (var j = 0; j < li.length; j++) {
+                    li[j].style.backgroundColor = "white";
+                }
+                this.style.backgroundColor = "pink";
+            }
+        }
+    </script> -->
+    <!-- <script>
+        var li = document.getElementsByTagName("li");
+        for (var i = 0; i < li.length; i++) {
+            li[i].onmouseover = function () {
+                for (var j = 0; j < li.length; j++) {
+                    li[j].style.backgroundColor = "white";
+                }
+                this.style.backgroundColor = "red";
+            }
+        }
+    </script> -->
+
+    <!-- 案例显示和隐藏二维码 -->
+    <!-- 写布局 -->
+    <!-- <div class="box">
+        <a href="" id="a"></a>
+        <img src="./456.png" alt="" id="imgs" class="hide">
+    </div>
+    <script>
+        var a = document.getElementById("a");
+        var img = document.getElementById("imgs");
+        a.onmouseover = function () {
+            img.className = "show";
+        }
+        a.onmouseout = function () {
+            img.className = "hide";
+        }
+    </script> -->
+
+    <!-- <input type="text" name="txt" id="">
+    <script>
+    console.log(document.getElementsByName("txt")[0]);
+    </script>
+
+    <button class="btn"></button>
+    <script>
+    console.log(document.getElementsByClassName("btn")[0]);
+    
+    </script> -->
+
+    <!-- 高亮显示div -->
+    <!-- <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+    var div = document.getElementsByTagName("div");
+    for(var i = 0; i < div.length; i++){
+        div[i].onmouseover =function(){
+            this.style.border = "2px solid red";
+        }
+        div[i].onmouseout = function(){
+            this.style.border = "";
+        }
+    }
+    
+    </script> -->
+
+    <!-- <input type="text" id="btn"> -->
+    <!-- <button class="bb"></button>
+    <button id="aa"></button> -->
+    <!-- <script>
+    //console.log(document.querySelector(".bb"));
+     console.log(document.querySelectorAll("button"));
+    </script> -->
+</body>
+
+</html>

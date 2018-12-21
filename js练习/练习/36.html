@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <style>
+        img {
+            position: absolute;
+        }
+    </style> -->
+    <style>
+        .box1 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 案例跟着图片走 -->
+    <!-- <img src="./tianshi.gif" alt="">
+    <script>
+        document.onmousemove = function (e) {
+            var img = document.querySelector('img');
+            img.style.left = e.clientX + 'px';
+            img.style.top = e.clientY + 'px';
+        }
+    </script> -->
+
+    <!-- 移动元素 -->
+    <button id="btn1">移动到400</button>
+    <button id="btn2">移动到800</button>
+    <div class="box1"></div>
+    <!-- <script>
+        var btn1 = document.querySelector('#btn1');
+        var btn2 = document.querySelector('#btn2');
+        var div = document.querySelector('div');
+        //点击按钮
+        btn1.onclick = function () {
+            //获取当前位置
+            var current = div.offsetLeft;
+            //初始化定时器
+            var timer = null;
+            //清除定时器
+            clearInterval(timer);
+            //定义定时器
+            timer = setInterval(function () {
+                //定义步进值
+                var step = 10;
+                //判断一下当前距离是否大于目标值 如果大于 让当前值减小 如果小于 让当前值增加
+                step = current < 400 ? step : -step;
+                //累加
+                current += step;
+                //判断目标值和当前值的差值 > 步进值
+                if (Math.abs(400 - current) > Math.abs(step)) {
+                    //如果是 继续累加的值赋值给div
+                    div.style.left = current + 'px';
+                } else {
+                    //否则 停止定时器
+                    clearInterval(timer);
+                    //直接给div的left值设置为目标值
+                    div.style.left = 400 + "px";
+                }
+            }, 20)
+        }
+        //点击按钮
+        btn2.onclick = function () {
+            //获取当前位置
+            var current = div.offsetLeft;
+            //清除定时器
+            clearInterval(timer);
+            //定义定时器
+            var timer = setInterval(function () {
+                //定义步进值
+                var step = 10;
+                //判断一下当前距离是否大于目标值 如果大于 让当前值减小 如果小于 让当前值增加
+                step = current < 800 ? step : -step;
+                //累加
+                current += step;
+                //判断目标值和当前值的差值 > 步进值
+                if (Math.abs(800 - current) > Math.abs(step)) {
+                    //如果是 继续累加的值赋值给div
+                    div.style.left = current + 'px';
+                } else {
+                    //否则 停止定时器
+                    clearInterval(timer);
+                    //直接给div的left值设置为目标值
+                    div.style.left = 800 + "px";
+                }
+            }, 20)
+        }
+    </script> -->
+    <script>
+        var box = document.querySelector('.box1');
+        document.querySelector('#btn1').onclick = function () {
+            animate(box, 400);
+        }
+        document.querySelector('#btn2').onclick = function () {
+            animate(box, 800);
+        }
+        function animate(elem, target) {
+            var current = elem.offsetLeft;
+            var timer = null;
+            clearInterval(timer);
+            timer = setInterval(function () {
+                var step = 10;
+                step = current < target ? step : -step;
+                current += step;
+                if (Math.abs(target - current) > Math.abs(step)) {
+                    elem.style.left = current + 'px';
+                } else {
+                    clearInterval(elem.timer);
+                    elem.style.left = target + 'px';
+                }
+            }, 20)
+        }
+    </script>
+</body>
+
+</html>

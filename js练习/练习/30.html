@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 2.css -->
+    <style>
+        table {
+              width: 500px;
+              margin: 100px auto;
+              border: 1px solid #c0c0c0;
+              /* 让边框合并 */
+              border-collapse: collapse;
+            }
+        
+            th, 
+            td {
+              border: 1px solid #c0c0c0;
+              text-align: center;
+            }
+          </style>
+</head>
+
+<body>
+    <!-- <table>
+        <thead>
+            <tr>
+                <th> <input type="checkbox" id="all"> </th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>爱好</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td>刘杰</td>
+                <td>21</td>
+                <td>男</td>
+                <td>王永红</td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td>王永红</td>
+                <td>18</td>
+                <td>女</td>
+                <td>刘杰</td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td>大猪蹄子</td>
+                <td>22</td>
+                <td>男</td>
+                <td>泡椒风爪</td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td>小猪梯子</td>
+                <td>19</td>
+                <td>女</td>
+                <td>大猪蹄子</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        //全选和反选
+        //获取全选按钮
+        var oBtn = document.querySelector('#all');
+        //获取替他按钮
+        var aBtn = document.querySelectorAll("tbody input");
+        //给全选按钮添加点击事件
+        oBtn.onclick = function () {
+            //遍历每个按钮
+            for (var i = 0; i < aBtn.length; i++) {
+                //让每个按钮的值为全选按钮的值
+                aBtn[i].checked = this.checked;
+            }
+        }
+        //给每个添加点击事件
+        for (var i = 0; i < aBtn.length; i++) {
+            aBtn[i].onclick = function () {
+                //默认都被选中
+                var flag = true;
+                //检查是不是都选中了
+                for (var j = 0; j < aBtn.length; j++) {
+                    //如果有一个没选中
+                    if (!aBtn[j].checked) {
+                        //就让全选不选中
+                        flag = false;
+                        break;
+                    }
+                }
+                oBtn.checked = flag;
+            }
+        }
+
+    </script> -->
+
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="all"></th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>爱好</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>阿斯顿飞过和</td>
+                <td>a's'x</td>
+                <td>阿瑟东</td>
+                <td>123</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>阿斯蒂芬</td>
+                <td>v重新注册</td>
+                <td>123</td>
+                <td>海关边防v调查</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>we'r'f'v</td>
+                <td>我的份</td>
+                <td>范围的</td>
+                <td>7655</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>和犹太人广泛的</td>
+                <td>h's'r'g</td>
+                <td> 34t</td>
+                <td>科ir</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>各部分v东西</td>
+                <td>娃儿方式z</td>
+                <td>234t'r</td>
+                <td>43其</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+    <!-- js -->
+    <script>
+        // 全选和反选
+        var input = document.querySelector('#all');
+        var other = document.querySelectorAll('tbody input');
+        input.onclick = function () {
+            for (var i = 0; i < other.length; i++) {
+                other[i].checked = this.checked;
+            }
+        }
+
+        //给每个按钮添加点击事件
+        for (var i = 0; i < other.length; i++) {
+            other[i].onclick = function () {
+                var flag = true;
+                for (var j = 0; j < other.length; j++) {
+                    if (!other[j].checked) {
+                        flag = false;
+                        break;
+                    }
+                }
+                input.checked = flag;
+            }
+        }
+    </script>
+</body>
+
+</html>

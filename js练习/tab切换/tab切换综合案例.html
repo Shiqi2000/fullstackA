@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- css -->
+    <style>
+        html,body{
+        margin: 0;
+        padding: 0;
+        background-color: #f3f3f3;
+    }
+    .tab{
+        width: 400px;
+        height: 300px;
+        background-color: #fff;
+        margin: 100px auto;
+        position: relative;
+    }
+    .nav{
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+    }
+    .nav a{
+        float: left;
+        display: block;
+        width: 25%;
+        height: 100%;
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        background-color: aliceblue;
+        color: black;
+        box-sizing: border-box;
+        border-right: 1px solid #ffffff;
+    }
+    .nav a:last-child{
+        border-right: none;
+    }
+    .section{
+        position: absolute;
+        top: 70px;
+        display: none;
+    }
+    input{
+        margin-bottom: 30px;
+        margin-left: 20px;
+    }
+    label{
+        margin-left: 40px;
+    }
+    .first1,.first2,.first3,.first4{
+        margin-left: 89px;
+    }
+    .second1,.second2,.second3,.second4{
+        margin-left: 38px;
+        margin-bottom: 40px;
+    }
+    .third{
+        margin-left: 162px;
+    }
+    .special,.special2,.special3{
+        margin-bottom: 15px;
+        margin-left: 52px;
+    }
+    .special1{
+        margin-bottom: 15px;
+        margin-left: 20px;
+    }
+    .fourth{
+        margin-left: 40px;
+    }
+    .nav .active{
+        background-color: aqua;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- html -->
+    <!-- 总的div -->
+    <div class="tab">
+        <!-- div上部分 -->
+        <div class="nav">
+            <!-- 四个a标签 -->
+            <!-- javascript:; 防止页面跳转 -->
+            <a href="javascript:;" class="active">学院</a>
+            <a href="javascript:;">院系</a>
+            <a href="javascript:;">班级</a>
+            <a href="javascript:;">学生</a>
+        </div>
+        <!-- div下部分 -->
+        <div class="content">
+            <div class="section" style="display:block;">
+                <label for="">地区</label><input type="text" name="" id="" class="one"><br>
+                <label for="">学校</label><input type="text" name="" id="" class="two"><br>
+                <button class="first1">默认</button>
+                <button class="first2">清空</button>
+            </div>
+            <div class="section">
+                <label for="">院系</label><input type="text" name="" id="" class="three"><br>
+                <button class="second1">java</button>
+                <button class="second2">全栈</button>
+                <button class="second3">大数据</button>
+                <button class="second4">python</button><br>
+                <button class="third">清空</button>
+            </div>
+            <div class="section">
+                <label for="">年级</label><input type="text" name="" id="" class="four"><br>
+                <label for="">班级</label><input type="text" name="" id="" class="five"><br>
+                <button class="first3">默认</button>
+                <button class="first4">清空</button>
+            </div>
+            <div class="section">
+                <label for="">学号</label><input type="text" name="" id="" class="special2"><br>
+                <label for="">姓名</label><input type="text" name="" id="" class="special"><br>
+                <label for="">年龄</label><input type="text" name="" id="" class="special"><br>
+                <label for="">性别</label><input type="text" name="" id="" class="special3"><br>
+                <label for="">手机号码</label><input type="text" name="" id="" class="special1"><br>
+                <button class="fourth">提交</button>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script>
+        // 获取a标签 section
+        var a = document.querySelectorAll('a');
+        var section = document.querySelectorAll('.section');
+        //遍历每个a标签
+        for (var i = 0; i < a.length; i++) {
+            //给a标签添加一个自定义属性 index 值为section索引
+            a[i].setAttribute("index", i);
+            //给a标签添加点击事件
+            a[i].onclick = function () {
+                //先让每个a不选中
+                for (var j = 0; j < a.length; j++) {
+                    a[j].removeAttribute('class');
+                    //让对应的section隐藏
+                    section[j].style.display = "none";
+                }
+                //给点击的a标签active
+                this.className = "active";
+                //让对应的section显示
+                section[this.getAttribute('index')].style.display = "block";
+            }
+        }
+        //获取学院部分的输入框
+        var one = document.querySelector('.one');
+        var two = document.querySelector('.two');
+        //获取学院部分的按钮
+        var first1 = document.querySelector('.first1');
+        var first2 = document.querySelector('.first2');
+        //获取院系部分的输入框
+        var three = document.querySelector('.three');
+        //获取院系部分的按钮
+        var second1 = document.querySelector('.second1');
+        var second2 = document.querySelector('.second2');
+        var second3 = document.querySelector('.second3');
+        var second4 = document.querySelector('.second4');
+        var third = document.querySelector('.third');
+        //获取班级部分的输入框
+        var four = document.querySelector('.four');
+        var five = document.querySelector('.five');
+        //获取班级部分的按钮
+        var first3 = document.querySelector('.first3');
+        var first4 = document.querySelector('.first4');
+        //获取学生部分的输入框
+        var special2 = document.querySelector('.special2');
+        var special3 = document.querySelector('.special3');
+        var special1 = document.querySelector('.special1');
+        //获取学生部分的按钮
+        var fourth = document.querySelector('.fourth');
+        //获取全部内容
+        var input = document.querySelectorAll('input');
+        //给学院部分的默认按钮添加点击事件
+        first1.onclick = function () {
+            one.value = "江苏省宿迁市沭阳县";
+        }
+        //给学院部分的清空按钮添加点击事件
+        first2.onclick = function () {
+            one.value = "";
+        }
+        //给院系部分的Java按钮添加点击事件
+        second1.onclick = function () {
+            three.value = "java";
+        }
+        //给院系部分的全栈按钮添加点击事件
+        second2.onclick = function () {
+            three.value = "全栈";
+        }
+        //给院系部分的大数据按钮添加点击事件
+        second3.onclick = function () {
+            three.value = "大数据";
+        }
+        //给院系部分的python按钮添加点击事件
+        second4.onclick = function () {
+            three.value = "python";
+        }
+        //给院系部分的清空按钮添加点击事件
+        third.onclick = function () {
+            three.value = "";
+        }
+        //给班级部分的默认按钮添加点击事件
+        first3.onclick = function () {
+            four.value = "2018级";
+            five.value = "全栈12班";
+        }
+        //给班级部分的清空按钮添加点击事件
+        first4.onclick = function () {
+            four.value = "";
+            five.value = "";
+        }
+        //给学生部分的输入框添加失去焦点事件
+        special2.onblur = function () {
+            //判断用户输入的是不是为六位数
+            if (this.value.length == 6) {
+                //如果是 背景色为蓝色
+                this.style.backgroundColor = "blue";
+            } else {
+                //如果不是 背景色为红色
+                this.style.backgroundColor = "red";
+            }
+        }
+        //给学生部分的输入框添加失去焦点事件
+        special3.onblur = function () {
+            //判断用户输入的是不是为男
+            if (this.value == "男") {
+                //如果是 背景色为蓝色
+                this.style.backgroundColor = "blue";
+            } else {
+                //如果不是 背景色为红色
+                this.style.backgroundColor = "red";
+            }
+        }
+        //给学生部分的输入框添加失去焦点事件
+        special1.onblur = function () {
+            //判断用户输入的是不是为11位数
+            if (this.value.length == 11) {
+                //如果是 背景色为蓝色
+                this.style.backgroundColor = "blue";
+            } else {
+                //如果不是 背景色为红色
+                this.style.backgroundColor = "red";
+            }
+        }
+        //给学生部分的提交按钮添加点击事件
+        fourth.onclick = function () {
+            //遍历每个input
+            for (var i = 0; i < input.length; i++) {
+                //打印
+                console.log(input[i].value);
+            }
+        }
+    </script>
+</body>
+
+</html>

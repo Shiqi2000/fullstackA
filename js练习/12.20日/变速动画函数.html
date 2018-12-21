@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+        position: relative;
+        width: 50px;
+        height: 40px;
+        background-color: deeppink;
+        margin-top: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="移动到400" id="btn1">
+    <input type="button" value="移动到800" id="btn2">
+    <div></div>
+    <script>
+        var oBtn1 = document.querySelector('#btn1');
+        var oBtn2 = document.querySelector('#btn2');
+        var oDiv = document.querySelector('div');
+
+        oBtn1.onclick = function () {
+            animate(oDiv, 400);
+        }
+        oBtn2.onclick = function () {
+            animate(oDiv, 800);
+        }
+
+        function animate(elem, target) {
+            clearInterval(elem.timer);
+            var current = elem.offsetLeft;
+            elem.timer = setInterval(function () {
+                var step = (target - current) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                current += step;
+                elem.style.left = current + 'px';
+                if (current == target) {
+                    clearInterval(elem.timer);
+                }
+            }, 20)
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 点击按钮弹出对话框 -->
+    <!-- 1.在html中放一个按钮 -->
+    <!-- <input type="button" value="你敢点我吗" id="btn"> -->
+    <!-- 2.写js -->
+    <!-- <script>
+        //找到这个按钮 通过id找最靠谱 因为一个页面中只有一个id
+        var oBtn = document.getElementById('btn');
+        //给这个按钮添加点击事件
+        oBtn.onclick = function () {
+            alert("好嗨哟");
+        }
+    </script> -->
+
+    <!-- 点击按钮弹出对话框 -->
+    <!-- html部分 -->
+    <!-- <input type="button" value="弹出对话框" id="btn"> -->
+    <!-- <script>
+        // 获取按钮
+        var oBtn = document.getElementById('btn');
+        //给按钮添加点击事件
+        oBtn.onclick = function () {
+            //弹出框
+            alert("点我呀");
+        }
+    </script> -->
+
+    <!-- 点击按钮弹出对话框 -->
+    <!-- html部分 -->
+    <!-- 获取按钮 -->
+    <!-- <input type="button" value="你敢点我吗？" id="btn"> -->
+    <!-- js部分 -->
+    <!-- <script>
+        //获取按钮
+        var oBtn = document.getElementById('btn');
+        //给按钮添加点击属性
+        oBtn.onclick = function () {
+            alert("弹出框");
+        }
+    </script>
+ -->
+
+
+    <!-- 点击按钮显示图片 -->
+    <!-- 1.在html中放一个按钮 -->
+    <!-- <input type="button" value="显示图片" id="btn"> -->
+    <!-- 2.在页面中放一个空的img标签 没有图片路径的img -->
+    <!-- <img src="" alt="" id="imgs"> -->
+    <!-- 3.js -->
+    <!-- <script>
+        // 获取按钮
+        var oBtn = document.getElementById('btn');
+        // 给按钮添加点击事件
+        oBtn.onclick = function () {
+            //找图片
+            var oImg = document.getElementById("imgs");
+            //给图片的src属性一个值 就是地址
+            oImg.src = "./京东.gif";
+        }
+    </script> -->
+
+    <!--点击按钮显示图片 -->
+    <!-- html部分 先有一个按钮 -->
+    <!-- <input type="button" value="显示图片" id="btn"> -->
+    <!-- 设置一个没有地址的img标签 -->
+    <!-- <img src="" alt="" id="imgs"> -->
+    <!-- js部分 -->
+    <!-- <script>
+        //获取按钮
+        var oBtn = document.getElementById('btn');
+        // 给按钮添加点击属性
+        oBtn.onclick = function () {
+            // 获取图片
+            var oImg = document.getElementById('imgs');
+            //给图片的src一个地址值
+            oImg.src = "./京东.gif";
+        }
+    </script> -->
+
+    <!-- 点击按钮显示图片 -->
+    <!-- html部分 先有一个按钮 -->
+    <!-- <input type="button" value="显示图片" id="btn"> -->
+    <!-- 设置一个图片标签 -->
+    <!-- <img src="" alt="" id="imgs"> -->
+    <!-- js部分 -->
+    <!-- <script>
+        // 获取按钮
+        var oBtn = document.getElementById('btn');
+        // 给按钮添加点击属性
+        oBtn.onclick = function () {
+            // 找图片
+            var oImg = document.getElementById('imgs');
+            //给图片添加src地址值
+            oImg.src = "./naoke.jpg";
+        }
+    </script> -->
+
+
+    <!-- 点击按钮修改p标签的内容 -->
+    <!-- html部分-->
+    <!-- 放一个按钮 -->
+    <!-- <input type="button" value="修改p标签的内容" id="btn"> -->
+    <!-- 放一个p标签 写上内容 -->
+    <!-- <p id="pp">玲珑骰子安红豆</p> -->
+    <!-- js部分 -->
+    <!-- <script>
+        // 获取按钮
+        var oBtn = document.getElementById('btn');
+        // 给按钮添加点击属性
+        oBtn.onclick = function () {
+            // 获取p标签
+            var p = document.getElementById('pp');
+            // 修改内容
+            p.innerText = "入骨相思君知否";
+        }
+    </script> -->
+
+    <!-- 点击按钮修改p标签的内容 -->
+    <!-- html部分 -->
+    <!-- 放一个按钮 -->
+    <!-- <input type="button" value="修改p标签的内容" id="btn"> -->
+    <!-- 放一个p标签 -->
+    <!-- <P id="pp">床前明月光</P> -->
+    <!-- js部分 -->
+    <!-- <script>
+        //获取按钮
+        var oBtn = document.getElementById('btn');
+        //给按钮添加点击属性
+        oBtn.onclick = function () {
+            // 获取p标签
+            var p = document.getElementById('pp');
+            // 修改内容
+            p.innerText = "疑是地上霜";
+        }
+    </script> -->
+
+    <!-- 点击按钮修改p标签的内容 -->
+    <!-- 放一个按钮 -->
+    <!-- <input type="button" value="修改p标签的内容" id="btn"> -->
+    <!-- 放一个p标签 -->
+    <!-- <p id="pp">刘杰</p> -->
+    <!-- js部分 -->
+    <!-- <script>
+        // 获取按钮
+        var oBtn = document.getElementById('btn');
+        // 给按钮添加点击属性
+        oBtn.onclick = function () {
+            // 获取p标签
+            var p = document.getElementById('pp');
+            // 修改内容
+            p.innerText = "是大猪蹄子";
+        }
+    </script> -->
+
+
+    <!-- 点击修改a标签的地址和文字 -->
+    <!-- html标签 -->
+    <!-- 放一个按钮 -->
+    <!-- <input type="button" value="修改a的地址和内容" id="btn"> -->
+    <!-- 放一个a标签 -->
+    <!-- <a id="link" href="http://www.baidu.com">百度</a> -->
+    <!-- js部分 -->
+    <!-- <script>
+        //获取按钮
+        var oBtn = document.getElementById('btn');
+        //给按钮添加点击属性
+        oBtn.onclick = function () {
+            // 获取a标签
+            var a = document.getElementById('link');
+            // 修改地址
+            a.href = "http://www.itcast.cn";
+            // 修改a标签的内容
+            a.innerText = "传智播客";
+        }
+    </script> -->
+
+    <!-- 点击按钮修改a标签的内容和地址 -->
+    <!-- 放一个按钮 -->
+    <!-- <input type="button" value="修改a的地址和内容" id="btn"> -->
+    <!-- 放一个a标签 -->
+    <!-- <a id="link" href="http://www.baidu.com">百度</a> -->
+    <!-- js部分 -->
+    <!-- <script>
+        //    获取按钮
+        var oBtn = document.getElementById('btn');
+        //给按钮添加点击属性
+        oBtn.onclick = function () {
+            //  获取a标签
+            var a = document.getElementById('link');
+            // 修改地址
+            a.href = "http://www.itcast.cn";
+            // 修改内容
+            a.innerText = "传智播客";
+        }
+    </script> -->
+
+    <!-- 点击按钮修改a标签的内容和地址 -->
+    <!-- 放一个按钮 -->
+    <!-- <input type="button" value="修改a标签" id="btn"> -->
+    <!-- 放一个a标签 -->
+    <!-- <a id="link" href="http://www.baidu.com">百度</a> -->
+    <!-- js部分 -->
+    <!-- <script> -->
+    <!-- // 获取按钮 -->
+    <!-- /\var oBtn = document.getElementById('btn'); -->
+    <!-- // 给按钮添加点击属性 -->
+    <!-- oBtn.onclick = function () { -->
+    <!-- // 获取a标签 -->
+    <!--  var a = document.getElementById('link'); -->
+    <!-- // 修改地址 -->
+    <!-- a.href = "http://www.itcast.cn"; -->
+    <!-- // 修改内容 -->
+    <!-- a.innerText = "传智播客"; -->
+    <!-- } -->
+
+    <!-- </script> -->
+
+
+    <!-- 点击按钮 修改多个p标签的内容 -->
+    <!-- html -->
+    <!-- 放一个按钮 -->
+    <!-- <input type="button" value="修改多个p标签的内容" id="btn"> -->
+    <!-- 放多个p标签 -->
+    <!-- <div class="box1">
+        <p>刘杰大猪蹄子</p>
+        <p>刘杰大猪蹄子</p>
+        <p>刘杰大猪蹄子</p>
+        <p>刘杰大猪蹄子</p>
+        <p>刘杰大猪蹄子</p>
+    </div>
+    <div class="box2">
+        <p>小猪梯子</p>
+        <p>小猪梯子</p>
+        <p>小猪梯子</p>
+        <p>小猪梯子</p>
+        <p>小猪梯子</p>
+    </div> -->
+    <!-- js部分 -->
+    <!-- <script>
+        // 获取按钮
+        var oBtn = document.getElementById('btn');
+        // 给按钮添加属性
+        oBtn.onclick = function () {
+            // 获取多个p标签
+            var ps = document.getElementsByTagName('p');
+            //给多个p标签修改内容(一定要遍历,因为要给每一个修改内容)
+            for (var i = 0; i < ps.length; i++) {
+                ps[i].innerText = "刘杰爱王永红";
+            }
+        }
+    </script> -->
+
+    <!-- 点击按钮修改多个p标签的内容 -->
+    <!--放一个按钮 -->
+    <!-- <input type="button" value="修改多个p标签的内容" id="btn"> -->
+    <!-- 放多个p标签 -->
+    <!-- <div class="box1">
+        <p>刘杰</p>
+        <p>刘杰</p>
+        <p>刘杰</p>
+        <p>刘杰</p>
+        <p>刘杰</p>
+    </div>
+    <div class="box2">
+        <p>大猪蹄子</p>
+        <p>大猪蹄子</p>
+        <p>大猪蹄子</p>
+        <p>大猪蹄子</p>
+        <p>大猪蹄子</p>
+    </div> -->
+    <!-- js部分 -->
+    <!-- <script>
+        // 获取按钮
+        var oBtn = document.getElementById('btn');
+        // 给按钮添加点击事件
+        oBtn.onclick = function () {
+            // 获取多个p标签
+            var pp = document.getElementsByTagName('p');
+            //修改内容修改多个一定要遍历
+            for (var i = 0; i < pp.length; i++) {
+                pp[i].innerText = "刘杰是大猪蹄子";
+            }
+
+        }
+    </script> -->
+
+    <!-- 点击按钮修改多个p标签的内容 -->
+    <!-- html -->
+    <!-- 放一个按钮 -->
+    <!-- <input type="button" value="修改多个p标签的内容" id="btn"> -->
+    <!-- 放多个p标签 -->
+    <!-- <div class="box1">
+        <p>刘杰是个大猪蹄子吗</p>
+        <p>刘杰是个大猪蹄子吗</p>
+        <p>刘杰是个大猪蹄子吗</p>
+        <p>刘杰是个大猪蹄子吗</p>
+        <p>刘杰是个大猪蹄子吗</p>
+    </div>
+    <div class="box2">
+        <p>是的呀</p>
+        <p>是的呀</p>
+        <p>是的呀</p>
+        <p>是的呀</p>
+        <p>是的呀</p> -->
+    <!-- </div> -->
+    <!-- js部分 -->
+    <!-- <script>
+            // 获取按钮
+            var oBtn = document.getElementById('btn');
+            // 给按钮添加点击属性
+            oBtn.onclick = function () {
+                // 获取p标签
+                var ps = document.getElementsByTagName('p');
+                // 修改内容
+                for (var i = 0; i < ps.length; i++) {
+                    ps[i].innerText = "哈哈哈";
+                }
+            }
+
+        </script> -->
+
+    <!-- 点击按钮修改图片的alt和title属性 -->
+    <!-- 写按钮 -->
+    <!-- <input type="button" value="点我" id="btn"> -->
+    <!-- 写图片  图片路径要写错 因为要显示alt的值-->
+    <!-- <img src="./京东.png" alt="这是谁?" title="这是京东" id="img"> -->
+    <!-- js部分 -->
+    <!-- <script> -->
+    <!-- //   获取按钮 -->
+    <!-- var oBtn = document.getElementById('btn');
+        // 给按钮添加点击属性
+        oBtn.onclick = function () {
+            // 获取图片
+            var oImg = document.getElementById('img');
+            //修改alt属性
+            oImg.alt = "我在哪";
+            // 修改title属性
+            oImg.title = "你猜";
+        }
+
+    </script> -->
+
+    <!-- 点击按钮修改图片的alt和title属性 -->
+    <!-- 放一个按钮 -->
+    <!-- <input type="button" value="点我" id="btn"> -->
+    <!-- 放一个图片 -->
+    <!-- <img src="./京东.png" alt="hello" title="not" id="imgs"> -->
+    <!-- js部分 -->
+    <!-- <script>
+    // 获取按钮
+    var oBtn = document.getElementById('btn');
+    // 给按钮添加点击事件
+    oBtn.onclick = function(){
+        // 获取图片
+        var oImg = document.getElementById('imgs');
+        // 修改alt
+        oImg.alt = "你好";
+        // 修改title
+        oImg.title = "fine";
+    }
+    </script> -->
+
+    <!-- 点击按钮修改图片的alt和title属性 -->
+    <!-- 放一个按钮 -->
+    <!-- <input type="button" value="点我" id="btn"> -->
+    <!-- 放一个图片 -->
+    <!-- <img src="./京东.png" alt="你好" title="好的" id="imgs"> -->
+    <!-- js部分 -->
+    <!-- <script>
+        var oBtn = document.getElementById('btn');
+        oBtn.onclick = function () {
+            var img = document.getElementById('imgs');
+            img.alt = "nihao";
+            img.title = "haode";
+        }
+    </script> -->
+
+    <!-- 点击按钮修改所有输入框的值 -->
+    <!-- 写按钮 -->
+    <!-- <input type="button" value="按钮" id="btn"> -->
+    <!-- 写输入框 -->
+    <!-- <input type="text" name="" value="你好">
+    <input type="text" name="">
+    <input type="text" name="">
+    <input type="text" name="">
+    <input type="text" name="">
+    <input type="text" name=""> -->
+    <!-- js -->
+    <!-- 获取按钮-->
+    <!-- <script>
+        var oBtn = document.getElementById('btn');
+        //    给按钮添加点击事件
+        oBtn.onclick = function () {
+            // 获取到所有输入框
+            var input = document.getElementsByTagName('input');
+            // 遍历所有input
+            for (var i = 0; i < input.length; i++) {
+                // 判断是不是输入框
+                if (input[i].type == 'text') {
+                    // 如果是输入框 写内容
+                    input[i].value = "刘杰大猪蹄";
+                }
+            }
+        }
+    </script> -->
+
+    <!-- 点击按钮修改所有输入框的值 -->
+    <!-- html -->
+    <!-- 放一个按钮 -->
+    <!-- <input type="button" value="修改输入框的值" id="btn">
+    <br>
+    写输入框
+    <input type="text" name="">
+    <input type="text" name="">
+    <input type="text" name="">
+    <input type="text" name="">
+    <input type="text" name="">
+    <input type="text" name="">
+     js -->
+    <!-- <script>
+        // 获取按钮
+        var oBtn = document.getElementById('btn');
+        // 给按钮添加点击属性
+        oBtn.onclick = function () {
+            // 获取所有输入框
+            var input = document.getElementsByTagName("input");
+            // 遍历所有input
+            for (var i = 0; i < input.length; i++) {
+                if (input[i].type == "text") {
+                    input[i].value = "第七组";
+                }
+            }
+        }
+    </script> -->
+
+    <!-- 点击按钮输入框的值被修改 -->
+    <!-- <input type="button" value="修改值" id="btn">
+    <input type="text" name="" id="">
+    <input type="text" name="" id="">
+    <input type="text" name="" id="">
+    <input type="text" name="" id="">
+    <input type="text" name="" id="">
+    <input type="text" name="" id="">
+    <input type="text" name="" id=""> -->
+    <!-- js -->
+    <!-- <script>
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = function () {
+            var input = document.getElementsByTagName("input");
+            for (var i = 0; i < input.length; i++) {
+                if (input[i].type == "text") {
+                    input[i].value = "刘杰";
+                }
+            }
+        }
+
+    </script> -->
+
+    <!-- 点击每个图片弹出对话框 -->
+    <!-- 准备多个图片 -->
+    <!-- <img src="./naoke.jpg" alt="">
+    <img src="./京东.gif" alt="">
+     js -->
+    <!-- <script>
+        // 获取图片 多个 
+        var img = document.getElementsByTagName('img');
+        // 遍历
+        for (var i = 0; i < img.length; i++) {
+            // 给每个图片添加事件
+            img[i].onclick = function () {
+                alert("你被选中了");
+            }
+        }
+    </script> -->
+
+    <!--点击每个图片弹出对话框 -->
+    <!-- 准备多个图片 -->
+    <!-- <img src="./京东.gif" alt="">
+    <img src="./naoke.jpg" alt=""> -->
+    <!-- js -->
+
+    <!-- <script>
+        // 获取图片
+    var img = document.getElementById("img");
+    // 遍历
+    for(var i = 0; i < img.length; i++){
+        // 给每个图片添加点击属性
+        img[i].onclick = function(){
+            alert("你被选中了");
+        }
+    }
+    
+    </script> -->
+
+    <!-- 点击图片弹出对话框 -->
+    <!-- 准备多个图片 -->
+    <!-- <img src="./京东.gif" alt="">
+<img src="./naoke.jpg" alt=""> -->
+    <!-- js -->
+    <!-- <script> -->
+    <!-- // var img = document.getElementsByTagName("img");
+// for(var i = 0; i < img.length; i++){
+//     img[i].onclick = function(){
+//         alert("你被选中了");
+//     }
+// } -->
+
+    <!-- // /</script> -->
+
+    <!-- 点击按钮 变化该按钮的type 和值 -->
+    <!-- <input type="button" value="你敢点我一下吗" id="btn">
+    <!-- js -->
+    <!-- <script>
+        var oBtn = document.getElementById('btn');
+        oBtn.onclick = function () {
+            // 修改该按钮的type
+            this.type = "text";
+            // 修改该按钮的value
+            this.value = "是我";
+        }
+    </script> -->
+
+    <!-- 点击按钮 变化该按钮的type和值 -->
+    <!-- <input type="button" value="你敢点我吗" id="btn"> -->
+    <!-- js -->
+    <!-- <script>
+    var oBtn = document.getElementById("btn");
+    oBtn.onclick = function(){
+        // 修改type
+        this.type = "text";
+        // 修改value
+        this.value = "是我";
+    }
+    </script> -->
+
+    <!-- 点击按钮 变化该按钮的type和值 -->
+    <!-- 放一个按钮 -->
+    <!-- <input type="button" value="你敢点我吗?" id="btn"> -->
+    <!-- js -->
+    <!-- <script>
+        var oBtn = document.getElementById('btn');
+        oBtn.onclick = function () {
+            this.type = "text";
+            this.value = "你猜";
+        }
+    </script> -->
+
+    <!-- 点击图片 修改自身的宽和高 -->
+    <!-- 写一个图片 -->
+    <!-- <img src="./naoke.jpg" alt="" id="img"> -->
+    <!-- js -->
+    <!-- <script>
+        var img = document.getElementById('img');
+        // 点击样式
+        img.onclick = function () {
+            this.width = "200";
+            img.height = "400";
+        }
+    </script> -->
+
+    <!--点击图片 修改自身的宽和高 -->
+    <!-- 写一个图片 -->
+    <!-- <img src="./京东.gif" alt=""  id="imgs"> -->
+    <!-- js -->
+    <!-- <script>
+    var img = document.getElementById("imgs");
+    img.onclick = function(){
+        this.width = "100";
+        img.height = "400";
+    }
+    </script> -->
+
+    <!-- 点击图片 修改自身的宽和高 -->
+    <!-- 放一个图片 -->
+    <!-- <img src="./京东.gif" alt="" id="imgs"> -->
+    <!-- js -->
+    <!-- <script>
+    var img = document.getElementById("imgs");
+    img.onclick = function(){
+        this.width = "400";
+        this.heigth = "400";
+    }
+    </script> -->
+
+    <!-- 排他思想 点其中任何一个 其他的元素都和它不一样 -->
+
+    <!-- 写好多按钮 -->
+    <!-- <input type="button" value="没">
+    <input type="button" value="没">
+    <input type="button" value="没">
+    <input type="button" value="没">
+    <input type="button" value="没">
+    <input type="button" value="没">
+    <input type="button" value="没"> -->
+
+    <!-- js -->
+    <!-- <script>
+         // 获取所有按钮 -->
+    <!-- var input = document.getElementsByTagName('input');
+        //  遍历 -->
+    <!-- for (var i = 0; i < input.length; i++) {
+            // 给每个按钮添加一个点击事件
+            input[i].onclick = function () {
+                // 给每个按钮设置一个统一的值
+                for (var j = 0; j < input.length; j++) {
+                    input[j].value = "没"
+                }
+                // 给点击的那个元素设置一个单独的值
+                this.value = "有";
+            }
+        } -->
+    <!-- </script>  -->
+
+    <!-- 排他思想 -->
+
+    <!-- 给好多按钮 -->
+    <!-- <input type="button" value="刘杰">
+    <input type="button" value="刘杰">
+    <input type="button" value="刘杰">
+    <input type="button" value="刘杰">
+    <input type="button" value="刘杰">
+    <input type="button" value="刘杰">
+    <input type="button" value="刘杰">
+    <input type="button" value="刘杰"> -->
+
+    <!-- js -->
+    <!-- <script>
+        var input = document.getElementsByTagName("input");
+        for (var i = 0; i < input.length; i++) {
+            input[i].onclick = function () {
+                for (var j = 0; j < input.length; j++) {
+                    input[j].value = "刘杰";
+                }
+                this.value = "王永红";
+            }
+        }
+    </script> -->
+
+    <!-- 排他思想 -->
+    <!-- <input type="button" value="王永红">
+    <input type="button" value="王永红">
+    <input type="button" value="王永红">
+    <input type="button" value="王永红">
+    <input type="button" value="王永红">
+    <input type="button" value="王永红">
+    <input type="button" value="王永红">
+    <input type="button" value="王永红">
+    <input type="button" value="王永红"> -->
+    <!-- <script>
+        var input = document.getElementsByTagName("input");
+        for (var i = 0; i < input.length; i++) {
+            input[i].onclick = function () {
+                for (var j = 0; j < input.length; j++) {
+                    input[j].value = "王永红";
+                }
+                this.value = "刘杰";
+            }
+        }
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 2.样式 -->
+    <style>
+        html,
+        body,
+        ul,
+        ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        .view {
+            position: relative;
+            margin: 50px auto;
+            width: 730px;
+            height: 454px;
+            overflow: hidden;
+        }
+
+
+        ul {
+            position: absolute;
+            width: calc(7 * 730px);
+        }
+
+        ul li {
+            float: left;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            color: #fff;
+            background-color: orange;
+            text-decoration: none;
+            font-size: 40px;
+            margin-top: -26px;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        ol {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+        }
+
+        ol li {
+            display: inline-block;
+            background-color: #fff;
+            margin: 0 2px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 22px;
+            cursor: pointer;
+        }
+
+        ol li.active {
+            background-color: steelblue;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="view">
+        <ul>
+            <li><a href="javascript:;"><img src="../image/1.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/2.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/3.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/4.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/5.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/6.jpg" alt=""></a></li>
+        </ul>
+        <!-- 左右按钮 -->
+        <a href="javascript:;" class="prev">《</a>
+        <a href="javascript:;" class="next">》</a>
+    </div>
+    <script src="../animate.js"></script>
+
+    <!-- <script>
+        //获取左边按钮
+        var prev = document.querySelector('.prev');
+        //获取右边按钮
+        var next = document.querySelector('.next');
+        //获取view
+        var view = document.querySelector('.view');
+        //获取view的宽度
+        var viewWidth = view.offsetWidth;
+        //获取ul
+        var ul = document.querySelector('ul');
+
+
+        // 做有小点的轮播图
+        // 先创建一个ol标签  createElement('ol')
+        var ol = document.createElement('ol');
+        //把ol标签添加到view的里面的后面
+        view.appendChild(ol);
+        //遍历 ul的所有元素 -- 6个
+        for (var i = 0; i < ul.children.length; i++) {
+            //在ol中创建6个小点
+            var li = document.createElement('li');
+            //把1 2 3 4 5 6 写到li中
+            li.innerHTML = i + 1;
+            //给每个li设置一个index 自定义属性
+            li.setAttribute('index', i);
+            //小点插入到ol中
+            ol.appendChild(li);
+        }
+        //选中第一个li
+        ol.children[0].className = 'active';
+
+
+        //获取第一个li
+        var firstLi = document.querySelector('ul li:first-child');
+        //插入ul的最后面
+        ul.appendChild(firstLi.cloneNode(true));
+        //先克隆再获取所有li
+        var li = document.querySelectorAll('ul li');
+        var num = 0;
+
+        var timer = setInterval(f1, 1500);
+        view.onmouseover = function () {
+            clearInterval(timer);
+        }
+        view.onmouseout = function () {
+            timer = setInterval(f1, 1500);
+        }
+
+        function f1() {
+            //判断num是不是倒数第二个
+            if (num == li.length - 1) {
+                //如果是 让num = 0
+                num = 0;
+                //让ul瞬间回到初始的0
+                ul.style.left = "0px";
+            }
+            //让num自增
+            num++;
+            //ul随之移动
+            animate(ul, - num * viewWidth);
+
+            //判断索引是不是ol的索引-1 
+            if (num > ol.children.length - 1) {
+                //如果是 让最后一个元素的class为空
+                ol.children[ol.children.length - 1].className = "";
+                //让第一个class为active
+                ol.children[0].className = 'active';
+            } else {
+                //找出所有ol中的元素 遍历
+                for (var j = 0; j < ol.children.length; j++) {
+                    //清除ol中所有li的class
+                    ol.children[j].removeAttribute('class');
+                }
+                //给索引为num的li添加class名字为active
+                ol.children[num].className = "active";
+            }
+        }
+        //点击左边按钮
+        prev.onclick = f1;
+        //点击右边按钮
+        next.onclick = function () {
+            //判断num是不是等于0
+            if (num == 0) {
+                //如果是 让num = 倒数第二个值
+                num = li.length - 1;
+                //ul瞬间移动到倒数第二个
+                ul.style.left = -num * viewWidth + 'px';
+            }
+            //让num自减
+            num--;
+            //ul随之移动
+            animate(ul, -num * viewWidth);
+
+            //找出所有ol中的元素 遍历
+            for (var j = 0; j < ol.children.length; j++) {
+                //清除ol中所有li的class
+                ol.children[j].removeAttribute('class');
+            }
+            //给索引为num的li添加class名字为active
+            ol.children[num].className = "active";
+        }
+    </script> -->
+
+
+    <!-- <script>
+//1.先做点击左右 完成无缝轮播图
+//1.1 获取左边按钮
+//1.2 获取右边按钮
+//1.3 获取view
+//1.4 获取view的宽度
+//1.5 获取ul
+//2.做有小点导航的轮播图（一定要在 第一个li被插入到ul之前去创建小点导航）
+//2.1 先创建一个ol标签
+//2.2 把ol标签添加到view里面的后面
+//2.3 遍历 ul中的所有子元素
+//2.4 在ol中创建6个小点 li
+//2.5 把1 2 3 4 5 6 写到li中去
+//2.6 给每个li设置index属性 自定义属性
+//2.7 把小点插入到ol中去
+//2.8 选中第一个li
+//1.6 找到第一个li 添加到ul的最后
+//1.7 先克隆完了之后 再去获取所有li
+//1.8.1 判断是不是最后一个
+//1.8.2 如果是 让num为0
+//1.8.3 让ul瞬间移动到0px位置
+//1.8.4 让num自增
+//1.8.5 随着num自增 ul也要移动
+//2.12 判断一下 索引是不是ol的索引-1 
+//2.13 如果是 让最后一个元素的class为空
+//2.14 让第一个class为active
+//2.9 找到所有ol的元素 遍历
+//2.10 清除ol中所有元素li的class
+//2.11 给索引为num的li添加class名字为active
+//1.8 点击左边按钮
+//1.9 点击右边按钮
+//1.9.1 判断num是不是第一个
+//1.9.2 如果是 回到最后一个
+//1.9.3 让ul瞬间回到最后一个
+//1.9.4 让num自减
+//1.9.5 随着num自减 ul也要移动
+//2.9 找到所有ol的元素 遍历
+//2.10 清除ol中所有元素li的class
+//2.11 给索引为num的li添加class名字为active
+    </script> -->
+
+
+    <script>
+        var prev = document.querySelector('.prev');
+        var next = document.querySelector('.next');
+        var view = document.querySelector('.view');
+        var viewWidth = view.offsetWidth;
+        var ul = document.querySelector('ul');
+        var ol = document.createElement('ol');
+        view.appendChild(ol);
+        for (var i = 0; i < ul.children.length; i++) {
+            var li = document.createElement('li');
+            li.innerHTML = i + 1;
+            li.setAttribute('index', i);
+            ol.appendChild(li);
+        }
+        ol.children[0].className = "active";
+        var firstLi = document.querySelector('ul li:first-child');
+        ul.appendChild(firstLi.cloneNode(true));
+        var li = document.querySelectorAll('ul li');
+        var num = 0;
+        prev.onclick = function () {
+            if (num == li.length - 1) {
+                num = 0;
+                ul.style.left = 0 + 'px';
+            }
+            num++;
+            animate(ul, -num * viewWidth);
+            if (num > ol.children.length - 1) {
+                ol.children[ol.children.length - 1].className = "";
+                ol.children[0].className = 'active';
+            } else {
+                for (var j = 0; j < ol.children.length; j++) {
+                    ol.children[j].removeAttribute('class');
+                }
+                ol.children[num].className = 'active';
+            }
+        }
+        next.onclick = function () {
+            if (num == 0) {
+                num = li.length - 1;
+                ul.style.left = -num * viewWidth + 'px';
+            }
+            num--;
+            console.log(num);
+            animate(ul, -num * viewWidth);
+            for (var j = 0; j < ol.children.length; j++) {
+                ol.children[j].removeAttribute('class');
+            }
+           
+            ol.children[num].className = 'active';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,
+    body,
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      width: 1150px;
+      height: 400px;
+      margin: 50px auto;
+      border: 1px solid red;
+      overflow: hidden;
+    }
+
+    ul {
+      list-style: none;
+      width: 1300px;
+      overflow: hidden;
+    }
+
+    li {
+      width: 240px;
+      height: 400px;
+      float: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <script src="./animate.js"></script>
+  <script>
+    //获取所有li
+    var li = document.querySelectorAll('li');
+    //遍历li  给背景图片
+    for (var i = 0; i < li.length; i++) {
+      li[i].style.backgroundImage = 'url(./image/' + (i + 1) + '.jpg)';
+    }
+    //遍历每个li 给每个li鼠标移入事件
+    for (var i = 0; i < li.length; i++) {
+      li[i].onmouseover = function () {
+        for (var j = 0; j < li.length; j++) {
+          //先给每个li宽度为100
+          animate(li[j], {
+            'width': 100
+          })
+        }
+        //然后给点击的那个800
+        animate(this, {
+          'width': 800
+        })
+      }
+    }
+    //遍历每个li  给鼠标移出事件
+    for (var i = 0; i < li.length; i++) {
+      li[i].onmouseout = function () {
+        for (var j = 0; j < li.length; j++) {
+          animate(li[j], {
+            //宽度都为240
+            'width': 240
+          })
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

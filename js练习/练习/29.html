@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 2.css -->
+    <style>
+        table {
+          width: 500px;
+          margin: 100px auto;
+          border: 1px solid #c0c0c0;
+          /* 让边框合并 */
+          border-collapse: collapse;
+        }
+    
+        th, 
+        td {
+          border: 1px solid #c0c0c0;
+          text-align: center;
+        }
+      </style>
+</head>
+
+<body>
+    <!-- html -->
+    <!-- 姓名 年龄 性别 籍贯 -->
+    <table>
+        <!-- 表格头 -->
+        <thead>
+            <tr>
+                <th> <input type="checkbox" id="all"> </th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>籍贯</th>
+            </tr>
+        </thead>
+        <!-- 表格主体 -->
+        <tbody>
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td> 张三 </td>
+                <td> 18 </td>
+                <td> 女 </td>
+                <td> 河南 </td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td> 李四 </td>
+                <td> 22 </td>
+                <td> 男 </td>
+                <td> 黑龙江 </td>
+            </tr>
+
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td> 王五 </td>
+                <td> 23 </td>
+                <td> 女 </td>
+                <td> 广西 </td>
+            </tr>
+
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td> 赵六 </td>
+                <td> 35 </td>
+                <td> 男 </td>
+                <td> 甘肃 </td>
+            </tr>
+
+            <tr>
+                <td> <input type="checkbox"> </td>
+                <td> 洪七 </td>
+                <td> 21 </td>
+                <td> 女 </td>
+                <td> 安徽 </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- js -->
+    <script>
+        //全选和反选
+        //获取全选按钮
+        var oBtn = document.querySelector("#all");
+        //获取其他按钮
+        var aBtn = document.querySelectorAll("tbody input");
+        //给全选按钮添加点击事件
+        oBtn.onclick = function () {
+            //遍历每个按钮
+            for (var i = 0; i < aBtn.length; i++) {
+                //让每个按钮的值为全选按钮的值
+                aBtn[i].checked = this.checked;
+            }
+        }
+        //每个按钮都被选择 那么全选按钮被选中 只要有一个没有被选择 全选按钮自动取消选择
+        //给每个按钮添加点击事件
+        for (var i = 0; i < aBtn.length; i++) {
+            aBtn[i].onclick = function () {
+                //默认每个都被选中
+                var flag = true;
+                //遍历检查 是不是每个都被选择
+                for (var j = 0; j < aBtn.length; j++) {
+                    //如果其中有一个没有被选中
+                    if (!aBtn[j].checked) {
+                        //就让全选按钮不选中
+                        flag = false;
+                        //停止循坏
+                        break;
+                    }
+                }
+                oBtn.checked = flag;
+            }
+        }
+    </script>
+</body>
+
+</html>

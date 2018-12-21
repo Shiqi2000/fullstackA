@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      position: relative;
+      width: 200px;
+      height: 201px;
+      background-color: red;
+      left: 139px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- <div class="box" style="left:137px;"> -->
+  <div class="box">
+  </div>
+
+  <script>
+    var box = document.querySelector('.box');
+
+    // 能不能获取到上面写的137  这个137有没有写错 有没有写到样式里 为什么没有获取到呢？
+    // 写在行内的样式 能用js获取 能产生效果的样式 能用js获取
+    // console.log(box.style.left);
+    // console.log(box.offsetLeft);
+
+
+
+    // 如何获取写在样式表中的样式 window.getComputedStyle(元素,伪元素(没有是null 有就写上).属性名字)
+
+    console.log(window.getComputedStyle(box, null)['left']); // 137
+
+    // console.log(getStyle(box, 'left'));
+    // console.log(window.getComputedStyle(box, null)) 获取到box中的所有的样式
+
+
+    // 通用的获取任何样式的方法
+    // function getStyle(elem, style) {
+    //   // 判断window有没有这个方法
+    //   if (window.getComputedStyle) {
+    //     // 如果有 获取对应的样式
+    //     return window.getComputedStyle(elem, null)[style];
+    //   } else {
+    //     // 如果没有 就用另外一种方式获取样式
+    //     return elem.currentStyle[style];
+    //   }
+    // }
+
+
+
+
+
+    // console.log(box.getCurrentStyle.left);
+
+    var obj = {
+      age: 18,
+      zx: 'asa',
+      sayhi: function () { }
+    }
+
+    // for (var key in obj) {
+    //   console.log(obj[key]);
+    // }
+
+    // console.log(obj[zx]);
+    // obj.zx
+
+    // console.log(obj.zhangsan); // undefined  说明zhangsan并不是obj的属性
+    // console.log(obj.age) // 18
+    // 请问undefined变成 布尔   flase
+    //  18   true  
+
+
+
+
+  </script>
+</body>
+
+</html>

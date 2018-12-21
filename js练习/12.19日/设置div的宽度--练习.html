@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 40px;
+            background-color: brown;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>按钮</button>
+    <div></div>
+    <script>
+        // //获取按钮和div
+        // var oBtn = document.querySelector('button');
+        // var oDiv = document.querySelector('div');
+        // //给按钮添加点击事件
+        // oBtn.onclick = function () {
+        //     //定义初始宽度
+        //     var current = 50;
+        //     //定义一个定时器
+        //     var timer = setInterval(function () {
+        //         //定义步进值 每次加几
+        //         var step = 2;
+        //         //判断当前宽度是不是小于600 
+        //         if (current < 600) {
+        //             //如果是 继续累加
+        //             current += step;
+        //             //把累加的宽度给div
+        //             oDiv.style.width = current + 'px';
+        //         } else {
+        //             //否则 清除定时器
+        //             clearInterval(timer);
+        //             oDiv.style.width = 600 + 'px';
+        //         }
+        //     }, 10)
+        // }
+
+
+
+        // var oBtn = document.querySelector('button');
+        // var oDiv = document.querySelector('div');
+        // oBtn.onclick = function () {
+        //     var current = 50;
+        //     var timer = setInterval(function () {
+        //         var step = 2;
+        //         if (current < 600) {
+        //             current += step;
+        //             oDiv.style.width = current + 'px';
+        //         } else {
+        //             clearInterval(timer);
+        //             oDiv.style.width = 600 + 'px';
+        //         }
+        //     }, 10)
+        // }
+
+        // var oBtn = document.querySelector('button');
+        // var oDiv = document.querySelector('div');
+        // oBtn.onclick = function () {
+        //     var current = 50;
+        //     var timer = setInterval(function () {
+        //         var step = 2;
+        //         if (current < 600) {
+        //             current += step;
+        //             oDiv.style.width = current + 'px';
+        //         } else {
+        //             clearInterval(timer);
+        //             oDiv.style.width = 600 + 'px';
+        //         }
+        //     }, 10)
+        // }
+
+
+        var oBtn = document.querySelector('button');
+        var oDiv = document.querySelector('div');
+        oBtn.onclick = function () {
+            var current = 50;
+            clearInterval(timer);
+            var timer = setInterval(function () {
+                var step = 2;
+                if (current < 600) {
+                    current += step;
+                    oDiv.style.width = current + 'px';
+                } else {
+                    oDiv.style.width = 600 + 'px';
+                    clearInterval(timer);
+                }
+            }, 20)
+        }
+
+    </script>
+</body>
+
+</html>

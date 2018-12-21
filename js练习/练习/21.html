@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--当点击按钮的时候 弹出“好嗨哟” -->
+    <!-- <input type="button" value="你敢点我吗" onclick="fn()">
+    <script>
+    function fn(){
+        alert("好嗨哟");
+    }
+    </script> -->
+
+    <!-- 实现html和js的分离 -->
+    <!-- <input type="button" value="你敢点我吗" id="btn">
+    <script>
+    var oBtn = document.getElementById('btn');
+    oBtn.onclick = function(){
+        alert("好嗨哟");
+    }
+    </script> -->
+
+    <!-- 点击按钮显示图片 -->
+    <!-- <input type="button" value="显示图片" id="btn">
+    <img src="" alt="" id="image">
+    <script>
+        // 获取按钮
+        var oBtn = document.getElementById("btn");
+        // 给这个按钮点击的属性
+        oBtn.onclick = function () {
+            // 获取图片 通过id
+            var oImg = document.getElementById('image');
+            // 给出图片地址
+            oImg.src = "./京东.gif";
+        }
+    </script> -->
+
+    <!-- 点击按钮修改p标签的内容
+    <!-- 按钮 -->
+    <!-- <input type="button" value="修改p标签的内容" id="btn"> -->
+    <!-- p标签 -->
+    <!-- <p id="pp">玲珑骰子安红豆</p> -->
+    <!-- js部分 -->
+    <!-- <script>
+        // 获取按钮
+    var oBtn = document.getElementById('btn');
+    // 给按钮点击的功能
+    oBtn.onclick = function(){
+        // 获取p标签
+        var p = document.getElementById('pp');
+        // 修改p标签内容
+        p.innerText = "入骨相思君知否";
+    }
+    </script> -->
+
+    <!-- html部分 -->
+    <!--给一个按钮 -->
+    <!-- <input type="button" value="修改a的地址和内容" id="btn"> -->
+    <!-- 给一个a标签 -->
+    <!-- <a id="link" href="http://www.baidu.com">百度</a> -->
+    <!-- <script>
+    var oBtn = document.getElementById('btn');
+    oBtn.onclick = function(){
+        var a = document.getElementById('link');
+        a.href = "http://www.itcast.cn";
+        a.innerText = "传智播客";
+    }
+    
+    </script> -->
+
+    <!-- html部分 -->
+    <!-- 给一个按钮 -->
+    <!-- <input type="button" value="修改多个p标签的内容" id="btn"> -->
+    <!-- 给多个p标签 -->
+    <!-- <div class="box1">
+        <p>我是谁</p>
+        <p>我是谁</p>
+        <p>我是谁</p>
+        <p>我是谁</p>
+        <p>我是谁</p>
+    </div>
+    <div class="box2">
+        <p>我在哪</p>
+        <p>我在哪</p>
+        <p>我在哪</p>
+        <p>我在哪</p>
+        <p>我在哪</p>
+    </div> -->
+    <!-- js部分 -->
+    <!-- <script>
+        // 获取按钮
+        var oBtn = document.getElementById('btn');
+        // 给按钮点击的属性
+        oBtn.onclick = function () {
+            // 获取多个p标签
+            var ap = document.getElementsByTagName('p');
+            // 变成了数组 遍历一遍
+            for (var i = 0; i < ap.length; i++) {
+                // 给每个元素修改内容
+                ap[i].innerText = "来自星星的你";
+            }
+        }
+    </script> -->
+
+    <!-- <input type="button" value="修改alt和title属性" id="btn">
+    <img id="img" src="./京东.png" alt="我是谁" title="我是京东"> -->
+    <!-- <script>
+        var oBtn = document.getElementById('btn');
+        oBtn.onclick = function () {
+            var imgs = document.getElementById('img');
+            imgs.alt = "我在哪";
+            imgs.title = "你猜";
+        }
+    </script> -->
+
+    
+</body>
+
+</html>

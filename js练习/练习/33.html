@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 事件绑定共有三种方法 
+    1：元素.带on的时间类型 = 事件处理函数
+    2：元素.addEventlistener("不带on的事件类型"，事件处理函数，false)
+    3：元素.attachEvent(带on的事件类型，事件处理程序)
+    -->
+    <!-- <input type="button" value="按钮" id="btn">
+   <input type="button" value="解绑" id="btn2">
+   <script>
+   
+   var oBtn = document.querySelector('#btn');
+   var oBtn2 = document.querySelector("#btn2");
+//    oBtn.onclick = function(){
+//        console.log(1);
+//    }
+//    oBtn2.onclick = function(){
+//        oBtn.onclick = null;
+//    }
+   </script> -->
+    <!-- <input type="button" value="按钮" id="btn">
+    <input type="button" value="解绑" id="btn2">
+    <script>
+        var oBtn = document.querySelector("#btn");
+        var oBtn2 = document.querySelector("#btn2");
+        //绑定
+        function f1() {
+            console.log(1);
+        }
+        function f2() {
+            console.log(2);
+        }
+        oBtn.addEventListener('click', f1, false);
+        oBtn.addEventListener('click', f2, false);
+
+        //解绑
+        oBtn2.addEventListener('click', function () {
+            oBtn.removeEventListener('click', f1, false);
+        }, false)
+    </script> -->
+
+    <!-- 点击按钮创建一个表格 -->
+    <!-- <input type="button" value="创建表格" id="btn">
+    <div id="dv"></div> -->
+    <!-- <script>
+        var arr = [
+            { name: "百度", href: "http://www.baidu.com" },
+            { name: "谷歌", href: "http://www.google.com" },
+            { name: "优酷", href: "http://www.youku.com" },
+            { name: "土豆", href: "http://www.tudou.com" },
+            { name: "快播", href: "http://www.kuaibo.com" },
+            { name: "爱奇艺", href: "http://www.aiqiyi.com" }
+        ];
+        //需求：把arr数组中的数据 显示到页面中 通过表格
+        //获取按钮 给按钮添加点击事件
+        // var oBtn = document.querySelector('#btn');
+        // oBtn.onclick = function () {
+        //     //创建一个表格
+        //     var table = document.createElement('table');
+        //     //给表格设置边框
+        //     table.border = "1";
+        //     //设置表格的边框为单线
+        //     table.cellSpacing = "0";
+        //     //把表格插入div
+        //     document.querySelector('div').appendChild(table);
+        //     //遍历arr
+        //     for (var i = 0; i < arr.length; i++) {
+        //         //在for循环中创建tr
+        //         var tr = document.createElement('tr');
+        //         //把tr插入到table中
+        //         table.appendChild(tr);
+        //         //创建第一个td
+        //         var td1 = document.createElement('td');
+        //         //设置td的值为 数组中每个对象中name的值
+        //         td1.innerHTML = arr[i].name;
+        //         //把td插入到tr中
+        //         tr.appendChild(td1);
+        //         //创建第二个td
+        //         var td2 = document.createElement('td');
+        //         //设置td的值为a标签 a标签的内容为 数组中每个对象的name的值 href为数组中每个对象中的href的值
+        //         td2.innerHTML = '<a href = ' + arr[i].href + '>' + arr[i].name + '</a>';
+        //         //把td插入tr
+        //         tr.appendChild(td2);
+        //     }
+        // }
+
+
+
+
+
+    //     var oBtn = document.querySelector('#btn');
+    //     oBtn.onclick = function () {
+    //         var table = document.createElement('table');
+    //         table.border = "1";
+    //         table.cellSpacing = "0";
+    //         document.querySelector('#dv').appendChild(table);
+    //         for (var i = 0; i < arr.length; i++) {
+    //             var tr = document.createElement('tr');
+    //             table.appendChild(tr);
+    //             var td1 = document.createElement('td');
+    //             td1.innerHTML = arr[i].name;
+    //             tr.appendChild(td1);
+    //             var td2 = document.createElement('td');
+    //             td2.innerHTML = '<a href =' + arr[i].href + '>' + arr[i].name + '</a>';
+    //             tr.appendChild(td2);
+    //         }
+    //     }
+    // </script> -->
+
+
+   
+</body>
+
+</html>

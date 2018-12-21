@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+          position: relative;
+          width: 100px;
+          height: 50px;
+          background-color: green;
+          margin-top: 20px;
+        }
+      </style>
+</head>
+
+<body>
+    <input type="button" value="移动到400px" id="btn1">
+    <input type="button" value="移动到800px" id="btn2">
+
+    <div></div>
+
+
+    <script>
+        var oBtn1 = document.querySelector('#btn1');
+        var oBtn2 = document.querySelector('#btn2');
+        var oDiv = document.querySelector('div');
+
+        oBtn1.onclick = function () {
+            animate(oDiv, 'width', 400);
+        }
+
+        oBtn2.onclick = function () {
+            animate(oDiv, 'left', 800);
+        }
+        // 封装变化任意属性的函数
+        /*
+        * elem 元素
+        * attr 属性名
+        * target 目标值
+        */
+        // function animate(elem, attr, target) {
+        //     clearInterval(elem.timer);
+        //     // 获取元素的当前位置 把获取到的值变成数字 200px -> 200
+        //     var current = parseInt(getStyle(elem, attr));
+        //     elem.timer = setInterval(function () {
+        //         var step = (target - current) / 10;
+        //         step = step > 0 ? Math.ceil(step) : Math.floor(step);
+        //         current += step;
+        //         elem.style[attr] = current + 'px';
+        //         if (current == target) {
+        //             clearInterval(elem.timer);
+        //         }
+        //     }, 20)
+        // }
+        // function getStyle(elem, attr) {
+        //     return window.getComputedStyle(elem, null)[attr];
+        // }
+
+        // function animate(elem, attr, target) {
+        //     clearInterval(elem.timer);
+        //     var current = parseInt(getStyle(elem, attr));
+        //     elem.timer = setInterval(function () {
+        //         var step = (target - current) / 10;
+        //         step = step > 0 ? Math.ceil(step) : Math.floor(step);
+        //         current += step;
+        //         elem.style[attr] = current + 'px';
+        //         if (current == target) {
+        //             clearInterval(elem.timer);
+        //         }
+        //     }, 20)
+
+        // }
+
+        // function getStyle(elem, attr) {
+        //     if (window.getComputedStyle) {
+        //         return window.getComputedStyle(elem, null)[attr];
+        //     }
+        // }
+
+        // function animate(elem, attr, target) {
+        //     clearInterval(elem.timer);
+        //     var current = parseInt(getStyle(elem, attr));
+        //     elem.timer = setInterval(function () {
+        //         var step = (target - current) / 10;
+        //         step = step > 0 ? Math.ceil(step) : Math.floor(step);
+        //         current += step;
+        //         elem.style[attr] = current + 'px';
+        //         if (current == target) {
+        //             clearInterval(elem.timer);
+        //         }
+        //     }, 20)
+
+        // }
+        // function getStyle(elem, attr) {
+        //     if (window.getComputedStyle) {
+        //         return window.getComputedStyle(elem, null)[attr];
+        //     }
+        // }
+
+        // function animate(elem, attr, target) {
+        //     clearInterval(elem.timer);
+        //     var current = parseInt(getStyle(elem, attr));
+        //     elem.timer = setInterval(function () {
+        //         var step = (target - current) / 10;
+        //         step = step > 0 ? Math.ceil(step) : Math.floor(step);
+        //         current += step;
+        //         elem.style[attr] = current + 'px';
+        //         if (current == target) {
+        //             clearInterval(elem.timer);
+        //         }
+        //     }, 20)
+        // }
+        // function getStyle(elem, attr) {
+        //     if (window.getComputedStyle) {
+        //         return window.getComputedStyle(elem, null)[attr];
+        //     }
+        // }
+
+    
+    </script>
+</body>
+
+</html>

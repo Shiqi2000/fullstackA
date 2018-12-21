@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <style>
+            .div1 {
+              width: 500px;
+              height: 500px;
+              background-color: red;
+            }
+        
+            .div2 {
+              width: 300px;
+              height: 300px;
+              background-color: green;
+            }
+        
+            .div3 {
+              width: 150px;
+              height: 150px;
+              background-color: blue;
+            }
+          </style> -->
+    <!-- <script>
+        //   window.onload = function(){
+        //       document.querySelector('input').onclick = function(){
+        //           console.log(1);
+        //       }
+        //   }
+        //   window.onload = function(){
+        //       document.querySelector('input').onclick = function(){
+        //           console.log("刘杰是大猪蹄子");
+        //       }
+        //   }
+
+        // window.onload = function(){
+        //     document.querySelector("input").onclick = function(){
+        //         console.log("hahaha");
+        //     }
+        // }
+          </script> -->
+</head>
+
+<body>
+    <!-- 为元素绑定多个事件 -->
+    <!-- <input type="button" value="按钮"> -->
+    <!-- <script>
+        var oBtn = document.querySelector('input');
+        //方式一：元素.on事件类型 = 事件处理函数
+        // oBtn.onclick = function () {
+        //     console.log(1);
+        // }
+        // oBtn.onclick = function () {
+        //     console.log(2);
+        // }
+        //方式二：元素.addEventListener(不带on的事件类型， 处理函数，false)
+        // oBtn.addEventListener('click', function () {
+        //     console.log("a");
+        // }, false)
+        // oBtn.addEventListener('click', function () {
+        //     console.log("b");
+        // }, false)
+        //1会被2覆盖
+        // oBtn.onclick = function () {
+        //     console.log(1);
+        // }
+        // oBtn.onclick = function () {
+        //     console.log(2);
+        // }
+        //a和b都能出来
+        // oBtn.addEventListener('click',function(){
+        //     console.log("a");
+        // },false)
+        // oBtn.addEventListener('click',function(){
+        //     console.log("b");
+        // },false)
+    </script> -->
+
+    <!-- 为元素解绑 -->
+    <!--防止用户重复提交 -->
+    <!-- <input type="button" value="按钮" id="btn">
+    <input type="button" value="解绑" id="btn2"> -->
+    <!-- <script>
+        var oBtn = document.querySelector('#btn');
+        var oBtn2 = document.querySelector('#btn2');
+        //方法一解绑
+        // oBtn.onclick = function () {
+        //     console.log(1);
+        // }
+        // oBtn2.onclick = function () {
+        //     oBtn.onclick = null;
+        // }
+        // oBtn.onclick = function () {
+        //     console.log("a");
+        // }
+        // oBtn2.onclick = function () {
+        //     oBtn.onclick = null;
+        // }
+
+        //方法二解绑
+        // function f1() {
+        //     console.log("wyh");
+        // }
+        // function f2() {
+        //     console.log("lj");
+        // }
+        // oBtn.addEventListener('click', f1, false);
+        // oBtn.addEventListener('click', f2, false);
+        // oBtn2.addEventListener('click', function () {
+        //     oBtn.removeEventListener('click', f1, false);
+        // }, false)
+
+        // function f1() {
+        //     console.log(1);
+        // }
+        // function f2() {
+        //     console.log(2);
+
+
+
+        // }
+        // oBtn.addEventListener('click', f1, false);
+        // oBtn.addEventListener('click', f2, false);
+        // oBtn2.addEventListener('click', function () {
+        //     oBtn.removeEventListener('click', f1, false);
+        // }, false)
+
+
+        //方法一
+        // oBtn.onclick = function () {
+        //     console.log(1);
+        // }
+        // oBtn2.onclick = function () {
+        //     oBtn.onclick = null;
+        // }
+        // oBtn.onclick = function () {
+        //     console.log(1);
+        // }
+        // oBtn2.onclick = function () {
+        //    oBtn.onclick = null;
+        // }
+
+        //方法二
+        // function f1() {
+        //     console.log(1);
+        // }
+        // function f2() {
+        //     console.log(2);
+        // }
+        // oBtn.addEventListener('click', f1, false);
+        // oBtn.addEventListener('click', f2, false);
+        // oBtn2.addEventListener('click', function () {
+        //     oBtn.removeEventListener('click', f1, false);
+        // }, false)
+    </script> -->
+    <!-- 
+        事件冒泡：元素有嵌套 有层次关系 有相同的事件 当里面的事件被触发 外面的也被触发 -->
+    <!-- <div class="div1" id="div1">
+           <div class="div2" id="div2">
+               <div class="div3" id="div3"></div>
+           </div>
+       </div> -->
+    <!-- <script>
+    var oBtn1 = document.querySelector(".div1");
+    var oBtn2 = document.querySelector(".div2");
+    var oBtn3 = document.querySelector(".div3");
+    // oBtn1.onclick = function(){
+    //     console.log(this.id);
+    // }
+    // oBtn2.onclick = function(e){
+    //     console.log(this.id);
+        
+    // }
+    // oBtn3.onclick = function(e){
+    //     console.log(this.id);
+    //     e.stopPropagation();
+    // }
+    
+    </script> -->
+    <!-- <script>
+        var oBtn1 = document.querySelector(".div1");
+        var oBtn2 = document.querySelector(".div2");
+        var oBtn3 = document.querySelector(".div3");
+        // oBtn1.onclick = function(e){
+        //     console.log(this.id + "===========" + e.eventPhase);
+        // }
+        // oBtn2.onclick = function(e){
+        //     console.log(this.id + "===========" + e.eventPhase);
+        //     // e.stopPropagation();
+        // }
+        // oBtn3.onclick = function(e){
+        //     console.log(this.id + "===========" + e.eventPhase);
+           
+        // }
+
+        //1:捕获--从外到里 2：目标--点击谁 谁就是目标 2：冒泡--从里到外
+        //true：不冒泡 false：冒泡
+        // oBtn1.addEventListener('click',function(e){
+        //     console.log(this.id + "===========" + e.eventPhase);
+        // },false)
+        // oBtn2.addEventListener('click',function(e){
+        //     console.log(this.id + "===========" + e.eventPhase);
+        // },false)
+        // oBtn3.addEventListener('click',function(e){
+        //     console.log(this.id + "===========" + e.eventPhase);
+        // },false)
+
+        // oBtn1.addEventListener('click',function(e){
+        //     console.log(this.id + "=========" + e.eventPhase)
+        // },true)
+        // oBtn2.addEventListener('click',function(e){
+        //     console.log(this.id + "=========" + e.eventPhase)
+        // },true)
+        // oBtn3.addEventListener('click',function(e){
+        //     console.log(this.id + "=========" + e.eventPhase)
+        // },true)
+        </script> -->
+
+    <!-- <script>
+        //只要是window的属性 可以省略window
+        //window是BOM的顶级对象
+        
+        </script> -->
+
+    <!-- 非要把js放在head中 就需要加载事件 -->
+    <!-- 加载事件：window.onload = function() -->
+    <!-- 加载事件的作用：等所有内容都有了 在执行 -->
+    <!-- <input type="button" value="按钮"> -->
+
+
+
+    <!-- location对象 -->
+    <!-- <span>百度</span>
+    <script>
+        var span = document.querySelector('span');
+        span.onclick = function () {
+            location.href = "http://www.baidu.com";
+        }
+
+    </script> -->
+    <!-- <i>淘宝</i>
+    <script>
+    var i = document.querySelector("i");
+    i.onclick = function(){
+        location.href = "http://www.taobao.com";
+    }
+    
+    </script> -->
+    <!-- <b>传智专修学院</b>
+    <script>
+    var b = document.querySelector("b");
+    b.onclick = function(){
+        location.href = "http://www.czxy.com";
+    }
+    
+    </script> -->
+    <!-- <input type="button" value="前进" id="btn1">
+    <input type="button" value="后退" id="btn2">
+    <a href="./35.html">下一个页面</a>
+    <script>
+        //让浏览器后退 history.back(); 后退一次
+        //让浏览器前进 history.forward(); 前进一次
+
+        //点击前进 让页面前进
+        document.querySelector('#btn1').onclick = function () {
+            history.forward();
+        }
+        //点击后退 让页面后退
+        document.querySelector('#btn2').onclick = function () {
+            history.back();
+        }
+    </script> -->
+
+    <!-- <input type="button" value="前进" id="btn1">
+    <input type="button" value="后退" id="btn2">
+    <a href="./2.jpg">下一张</a>
+    <script>
+        document.querySelector('#btn1').onclick = function () {
+            history.forward();
+        }
+        document.querySelector('#btn2').onclick = function () {
+            history.back();
+        }
+    </script> -->
+
+    <!-- 定时器 -->
+    <!-- <input type="button" value="开始" id="btn1">
+    <input type="button" value="停止" id="btn2">
+    <script>
+        var btn1 = document.querySelector('#btn1');
+        var btn2 = document.querySelector('#btn2');
+        var timer;
+        btn1.onclick = function () {
+            var num = 0;
+            timer = setInterval(function () {
+                num++;
+                console.log(num + "hahah");
+            }, 100)
+        }
+        btn2.onclick = function () {
+            clearInterval(timer);
+        }
+    </script> -->
+
+   
+</body>
+
+</html>

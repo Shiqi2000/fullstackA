@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- location对象 -->
+    <!-- 用span跳转页面 -->
+    <!-- <span>百度</span>
+    <script>
+    var span = document.querySelector('span');
+    span.onclick = function(){
+        location.href = "./2.jpg";
+    }
+    
+    </script> -->
+
+    <!-- <button id="btn1">开始数</button>
+    <button id="btn2">停！</button>
+    <script>
+        var timer;
+        document.querySelector('#btn1').onclick = function () {
+            var num = 0;
+            timer = setInterval(function () {
+                num++;
+                console.log(num + "只车梦晓");
+            }, 1000)
+        }
+        document.querySelector("#btn2").onclick = function () {
+            clearInterval(timer);
+        }
+
+    </script> -->
+
+    <!-- <input type="button" value="开始吧 皮卡丘" id="btn1">
+    <input type="button" value="停止吧 皮卡丘" id="btn2">
+    <script>
+    var timer;
+    document.querySelector('#btn1').onclick = function(){
+        var num = 0;
+        timer = setInterval(function(){
+            num++;
+            console.log(num + "hahaha");
+        },100)
+    }
+    
+    document.querySelector("#btn2").onclick = function(){
+        clearInterval(timer);
+    }
+        </script> -->
+
+    <!-- 如何给按钮添加不同的事件 让他处理同一个函数 -->
+    <!-- <input type="button" value="按钮" id="btn">
+    <script>
+        //获取按钮
+        var oBtn = document.querySelector('#btn');
+        //给按钮添加点击事件
+        oBtn.onclick = fn;
+        //给按钮添加鼠标移入事件
+        oBtn.onmouseover = fn;
+        //给按钮添加鼠标移出事件
+        oBtn.onmouseout = fn;
+        //声明一个函数
+        function fn(e) {
+            //根据事件参数对象 获取事件类型
+            var type = e.type;
+            //判断类型
+            switch (type) {
+                case 'click':
+                    console.log("我被点击了");
+                    break;
+                case 'mouseover':
+                    console.log('鼠标移入');
+                    break;
+                case 'mouseout':
+                    console.log('鼠标移出');
+                    break;
+            }
+        }
+
+    </script> -->
+
+    <!-- <input type="button" value="按钮" id="btn">
+    <script>
+        var oBtn = document.querySelector('#btn');
+        oBtn.onclick = fn;
+        oBtn.onmouseover = fn;
+        oBtn.onmouseout = fn;
+        function fn(e) {
+            var type = e.type;
+            switch (type) {
+                case 'click':
+                    console.log("我被点击了");
+                    break;
+                case "mouseover":
+                    console.log("鼠标移入");
+                    break;
+                case 'mouseout':
+                    console.log("鼠标移出");
+                    break;
+            }
+        }
+
+    </script> -->
+
+    <!-- <input type="button" value="按钮">
+    <script>
+        var oBtn = document.querySelector('input');
+        oBtn.onclick = fn;
+        oBtn.onmouseover = fn;
+        oBtn.onmouseout = fn;
+        function fn(e) {
+            var type = e.type;
+            switch (type) {
+                case 'click':
+                    alert('我被点击了');
+                    break;
+                case 'mouseover':
+                    alert('鼠标移入');
+                    break;
+                case 'mouseout':
+                    alert('鼠标移出');
+                    break;
+            }
+        }
+
+    </script> -->
+
+    <!-- <input type="button" value="前进" id="btn1">
+    <input type="button" value="后退" id="btn2">
+    <a href="./34.html">上一个页面</a>
+    <script>
+        //点击前进 让页面前进
+        document.querySelector('#btn1').onclick = function () {
+            history.forward();
+        }
+        //点击后退 让页面后退
+        document.querySelector('#btn2').onclick = function () {
+            history.back();
+        }
+
+    </script> -->
+
+    <!-- <input type="button" value="前进" id="btn1">
+    <input type="button" value="后退" id="btn2">
+    <a href="./3.jpg">上一张</a>
+    <script>
+        document.querySelector('#btn1').onclick = function () {
+            history.forward();
+        }
+        document.querySelector('#btn2').onclick = function () {
+            history.back();
+        }
+    </script> -->
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 2.样式 -->
+    <style>
+        html,
+        body,
+        ul,
+        ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        .view {
+            position: relative;
+            margin: 50px auto;
+            width: 730px;
+            height: 454px;
+            overflow: hidden;
+        }
+
+
+        ul {
+            position: relative;
+            width: calc(6 * 730px);
+        }
+
+        ul li {
+            float: left;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            color: #fff;
+            background-color: orange;
+            text-decoration: none;
+            font-size: 40px;
+            margin-top: -26px;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="view">
+        <ul>
+            <li><a href="javascript:;"><img src="../image/1.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/2.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/3.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/4.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/5.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/6.jpg" alt=""></a></li>
+        </ul>
+        <!-- 左右按钮 -->
+        <a href="javascript:;" class="prev">《</a>
+        <a href="javascript:;" class="next">》</a>
+    </div>
+    <script src="../animate.js"></script>
+    <!-- <script>
+        //获取左边按钮
+        var prev = document.querySelector('.prev');
+        //获取右边按钮
+        var next = document.querySelector('.next');
+        //获取ul
+        var ul = document.querySelector('ul');
+        //获取view
+        var view = document.querySelector('.view');
+        //获取view的宽度
+        var viewWidth = view.offsetWidth;
+        //获取所有li
+        var li = document.querySelectorAll('ul li');
+        //声明一个自增变量
+        var num = 0;
+
+        //点击左边按钮
+        prev.onclick = function () {
+            //判断有没有点到最后一个
+            if (num < li.length - 1) {
+                //让自增变量自增
+                num++;
+                //让ul向左移动 每次移动 索引*图片的宽度
+                animate(ul, - num * viewWidth);
+            }
+        }
+        //点击右边按钮
+        next.onclick = function () {
+            //判断一下 num是不是>0
+            if (num > 0) {
+                //让num自减
+                num--;
+                //让ul向右移动 每次移动 索引*图片的宽度
+                animate(ul, -num * viewWidth);
+            }
+        }
+    </script> -->
+
+
+    <!-- <script>
+        //获取左边按钮
+        var prev = document.querySelector('.prev');
+        //获取右边按钮
+        var next = document.querySelector('.next');
+        //获取ul
+        var ul = document.querySelector('ul');
+        //获取view
+        var view = document.querySelector('.view');
+        //获取view的宽度
+        var viewWidth = view.offsetWidth;
+        //获取所有li
+        var li = document.querySelectorAll(' ul li');
+        //声明一个自增变量
+        var num = 0;
+
+        //点击左边按钮
+        prev.onclick = function () {
+            //判断一下 有没有点到最后一个  
+            if (num < li.length - 1) {
+                //让自增变量自增
+                num++;
+                //让ul向左移动 每次移动 索引*图片的宽度
+                animate(ul, -num * viewWidth);
+            }
+        }
+        //点击右边按钮
+        next.onclick = function () {
+            //判断一下num是不是大于0
+            if (num > 0) {
+                //让num自减
+                num--;
+                //让ul向右移动 每次移动 索引*图片的宽度
+                animate(ul, - num * viewWidth);
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        //获取左边按钮
+        var prev = document.querySelector('.prev');
+        //获取右边按钮
+        var next = document.querySelector('.next');
+        //获取view
+        var view = document.querySelector('.view');
+        //获取view的宽度
+        var viewWidth = view.offsetWidth;
+        //获取ul
+        var ul = document.querySelector('ul');
+        //获取所有li
+        var li = document.querySelectorAll('li');
+        //声明一个变量
+        var num = 0;
+        //点击左边按钮
+        prev.onclick = function () {
+            //判断num是不是小于最后一个 
+            if (num < li.length - 1) {
+                //如果是 自增
+                num++;
+                //让ul向左移动
+                animate(ul, -num * viewWidth);
+            }
+
+        }
+        //点击右边按钮
+        next.onclick = function () {
+            //判断num是不是大于0
+            if (num > 0) {
+                //如果是 自减
+                num--;
+                //让ul朝右移动
+                animate(ul, -num * viewWidth);
+            }
+
+        }
+
+
+    </script> -->
+
+    <!-- <script>
+        var prev = document.querySelector('.prev');
+        var next = document.querySelector('.next');
+        var view = document.querySelector('.view');
+        var viewWidth = view.offsetWidth;
+        var ul = document.querySelector('ul');
+        var li = document.querySelectorAll('ul li');
+        var num = 0;
+        prev.onclick = function () {
+            if (num < li.length - 1) {
+                num++;
+                animate(ul, -num * viewWidth);
+            }
+        }
+        next.onclick = function () {
+            if (num > 0) {
+                num--;
+                animate(ul, -num * viewWidth);
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        var prev = document.querySelector('.prev');
+        var next = document.querySelector('.next');
+        var view = document.querySelector('.view');
+        var viewWidth = view.offsetWidth;
+        var ul = document.querySelector('ul');
+        var li = document.querySelectorAll('li');
+        var num = 0;
+        prev.onclick = function () {
+            if (num < li.length - 1) {
+                num++;
+                animate(ul, -num * viewWidth);
+            }
+        }
+        next.onclick = function () {
+            if (num > 0) {
+                num--;
+                animate(ul, -num * viewWidth);
+            }
+        }
+    </script> -->
+
+    <script>
+        var prev = document.querySelector('.prev');
+        var next = document.querySelector('.next');
+        var view = document.querySelector('.view');
+        var viewWidth = view.offsetWidth;
+        var ul = document.querySelector('ul');
+        var li = document.querySelectorAll('li');
+        var num = 0;
+        prev.onclick = function () {
+            if (num < li.length - 1) {
+                num++;
+                animate(ul, -num * viewWidth);
+            }
+        }
+        next.onclick = function () {
+            if (num > 0) {
+                num--;
+                animate(ul, -num * viewWidth);
+            }
+        }
+    </script>
+</body>
+
+</html>

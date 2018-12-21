@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #f3f3f3;
+        }
+
+        .tab {
+            position: relative;
+            width: 400px;
+            height: 250px;
+            background-color: #fff;
+            margin: 100px auto;
+        }
+
+        .nav {
+            width: 100%;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .nav a {
+            display: block;
+            float: left;
+            width: 25%;
+            height: 100%;
+            background-color: rgb(192, 220, 192);
+            box-sizing: border-box;
+            border-right: 1px solid #ffffff;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .section {
+            display: none;
+            position: absolute;
+            top: 40px;
+        }
+
+        li {
+            line-height: 30px;
+        }
+
+        .nav .active {
+            background-color: #9baf9b;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- html -->
+    <div class="tab">
+        <div class="nav">
+            <a href="javascript:;" class="active">国内新闻</a>
+            <a href="javascript:;">国际新闻</a>
+            <a href="javascript:;">体育新闻</a>
+            <a href="javascript:;">娱乐新闻</a>
+        </div>
+        <div class="content">
+            <div class="section" style="display:block;">
+                <ol>
+                    <li>河南再次发生矿难,死伤人数超过1个人</li>
+                    <li>禽流感在全国蔓延,温家宝指示</li>
+                    <li>南方大旱,农作物减产绝收面积上亩</li>
+                    <li>流感在广东群体性爆发</li>
+                    <li>禽流感在全国蔓延</li>
+                </ol>
+            </div>
+            <div class="section">
+                <ol>
+                    <li>河南再次发生矿难,死伤人数超过1个人</li>
+                    <li>禽流感在全国蔓延,温家宝指示</li>
+                    <li>南方大旱,农作物减产绝收面积上亩</li>
+                    <li>流感在广东群体性爆发</li>
+                </ol>
+            </div>
+            <div class="section">
+                <ol>
+                    <li>河南再次发生矿难,死伤人数超过1个人</li>
+                    <li>禽流感在全国蔓延,温家宝指示</li>
+                    <li>南方大旱,农作物减产绝收面积上亩</li>
+                </ol>
+            </div>
+            <div class="section">
+                <ol>
+                    <li>河南再次发生矿难,死伤人数超过1个人</li>
+                    <li>禽流感在全国蔓延,温家宝指示</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        //获取所有a标签和section
+        var a = document.querySelectorAll('a');
+        var section = document.querySelectorAll('.section');
+        //遍历所有a标签
+        for (var i = 0; i < a.length; i++) {
+            // 给每个a标签设置一个自定义属性index 值是每个section的索引
+            a[i].setAttribute("index", i);
+            //给a标签点击事件
+            a[i].onclick = function () {
+                //先让每个a标签不选中
+                for (var j = 0; j < a.length; j++) {
+                    a[j].removeAttribute('class');
+                    //让每个section隐藏
+                    section[j].style.display = "none";
+                }
+                //给点击的a标签active
+                this.className = "active";
+                //让对应的section显示
+                section[this.getAttribute("index")].style.display = "block";
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        //获取所有a标签 和 section
+        var a = document.querySelectorAll('a');
+        var section = document.querySelectorAll('.section');
+        //遍历每个a标签
+        for (var i = 0; i < a.length; i++) {
+            //给a标签设置一个自定义属性 index 对应的值是section的索引
+            a[i].setAttribute("index", i);
+            //给a标签点击事件
+            a[i].onclick = function () {
+                //先让每个a标签都不选中
+                for (var j = 0; j < a.length; j++) {
+                    a[j].removeAttribute('class');
+                    //section隐藏
+                    section[j].style.display = "none";
+                }
+                //给点击的a标签active属性
+                this.clasName = "active";
+                //让对应的section显示
+                section[this.getAttribute('index')].style.display = "block";
+            }
+        }
+
+    </script> -->
+
+    <!-- <script>
+        var a = document.querySelectorAll('a');
+        var section = document.querySelectorAll('.section');
+        for (var i = 0; i < a.length; i++) {
+            a[i].setAttribute("index", i);
+            a[i].onclick = function () {
+                for (var j = 0; j < a.length; j++) {
+                    a[j].removeAttribute('class');
+                    section[j].style.display = "none";
+                }
+                this.className = "active";
+                section[this.getAttribute('index')].style.display = "block";
+            }
+        }
+
+    </script> -->
+</body>
+
+</html>

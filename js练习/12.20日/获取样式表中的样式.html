@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        margin: 0px;
+    }
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+        left: 121px;
+    }
+    div::after{
+        content: "";
+        background-color: brown;
+
+    }
+    </style>
+</head>
+<body>
+    <!-- <div style="left:21px"></div>  -->
+    <div></div>
+    <script>
+    var oDiv = document.querySelector('div');
+    //获取div样式的方式
+    //offsetLeft
+    // console.log(oDiv.offsetLeft);
+    //元素.style.属性名 只能获取行内样式
+    // console.log(oDiv.style.left);
+    //window.getComputeredStyle(元素，伪元素).属性名
+    console.log(window.getComputedStyle(oDiv,null).left);
+    console.log(window.getComputedStyle(oDiv,null).width);
+    console.log(window.getComputedStyle(oDiv,null).height);
+    console.log(window.getComputedStyle(oDiv,'after')['backgroundColor']);
+    </script>
+</body>
+</html>

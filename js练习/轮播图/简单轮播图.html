@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        ul,
+        ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        .view {
+            position: relative;
+            margin: 50px auto;
+            width: 730px;
+            height: 454px;
+            overflow: hidden;
+        }
+
+        ul {
+            position: relative;
+            width: calc(6 * 730px);
+        }
+
+        ul li {
+            float: left;
+        }
+
+        ol {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+        }
+
+        ol li {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            color: aliceblue;
+            background-color: black;
+            cursor: pointer;
+        }
+
+        ol li.active {
+            background-color: red;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- html -->
+    <div class="view">
+        <ul>
+            <li><a href="javascript:;"><img src="../image/1.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/2.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/3.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/4.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/5.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../image/6.jpg" alt=""></a></li>
+        </ul>
+        <ol>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ol>
+    </div>
+    <script src="../animate.js"></script>
+    <!-- <script>
+        var olLi = document.querySelectorAll('ol li');
+        var ul = document.querySelector('ul');
+        for (var i = 0; i < olLi.length; i++) {
+            olLi[i].setAttribute('index', i);
+            olLi[i].onmouseover = function () {
+                for (var j = 0; j < olLi.length; j++) {
+                    olLi[j].removeAttribute('class');
+                }
+                this.className = 'active';
+                var index = this.getAttribute('index');
+                animate(ul, -index * 730);
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        var olLi = document.querySelectorAll(' ol li');
+        var ul = document.querySelector('ul');
+        for (var i = 0; i < olLi.length; i++) {
+            olLi[i].setAttribute('index', i);
+            olLi[i].onmouseover = function () {
+                for (var j = 0; j < olLi.length; j++) {
+                    olLi[j].removeAttribute('class');
+                }
+                this.className = "active";
+                var index = this.getAttribute('index');
+                animate(ul, -index * 730)
+            }
+        }
+
+    </script> -->
+
+    <!-- <script>
+        var li = document.querySelectorAll('ol li');
+        var ul = document.querySelector('ul');
+        for (var i = 0; i < li.length; i++) {
+            li[i].setAttribute('index', i);
+            li[i].onmouseover = function () {
+                for (var j = 0; j < li.length; j++) {
+                    li[j].removeAttribute('class');
+                }
+                this.className = "active";
+                var index = this.getAttribute('index');
+                animate(ul, -index * 730);
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        var li = document.querySelectorAll('ol li');
+        var ul = document.querySelector('ul');
+        for (var i = 0; i < li.length; i++) {
+            li[i].setAttribute('index', i);
+            li[i].onmouseover = function () {
+                for (var j = 0; j < li.length; j++) {
+                    li[j].removeAttribute('class');
+                }
+                this.className = 'active';
+                var index = this.getAttribute('index');
+                animate(ul, -index * 730);
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        var olLi = document.querySelectorAll('ol li');
+        var ul = document.querySelector('ul');
+        for (var i = 0; i < olLi.length; i++) {
+            olLi[i].setAttribute('index', i);
+            olLi[i].onmouseover = function () {
+                for (var j = 0; j < olLi.length; j++) {
+                    olLi[j].removeAttribute('class');
+                }
+                this.className = 'active';
+                var index = this.getAttribute('index');
+                animate(ul, -index * 730);
+            }
+        }
+
+    </script> -->
+
+    <!-- <script>
+        var olLi = document.querySelectorAll('ol li');
+        var ul = document.querySelector('ul');
+        for (var i = 0; i < olLi.length; i++) {
+            olLi[i].setAttribute('index', i);
+            olLi[i].onmouseover = function () {
+                for (var j = 0; j < olLi.length; j++) {
+                    olLi[j].removeAttribute('class');
+                }
+                this.className = "active";
+                var index = this.getAttribute('index');
+                animate(ul, -index * 730);
+            }
+        }
+
+    </script> -->
+
+    <!-- <script>
+        var olLi = document.querySelectorAll('ol li');
+        var ul = document.querySelector('ul');
+        for (var i = 0; i < olLi.length; i++) {
+            olLi[i].setAttribute('index', i);
+            olLi[i].onmouseover = function () {
+                for (var j = 0; j < olLi.length; j++) {
+                    olLi[j].removeAttribute('class');
+                }
+                this.className = "active";
+                var index = this.getAttribute('index');
+                animate(ul, -index * 730);
+            }
+        }
+    </script> -->
+</body>
+
+</html>

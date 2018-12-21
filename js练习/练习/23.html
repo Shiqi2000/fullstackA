@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* .box {
+            position: fixed;
+            top: 50%;
+            right: 0px;
+        }
+
+        .box a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-image: url(./bgs.png);
+            background-position: -158px -51px;
+            background-repeat: no-repeat;
+
+        }
+
+        .box img {
+            position: absolute;
+            top: -48px;
+            left: -158px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        } */
+        /* * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            float: left;
+            margin-left: 10px;
+            margin-top: 5px;
+        } */
+
+        /* * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #cccccc;
+            padding-left: 40px;
+        }
+
+        h4 {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            font-size: 24px;
+            color: black;
+            font-family: "SimSun";
+        }
+
+        ul {
+            list-style: none;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            margin-right: 15px;
+
+        }
+
+        li img {
+            width: 100px;
+            height: auto;
+        }
+        .imgs{
+            width: 558px;
+            height: auto;
+        }
+        p{
+            color: black;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- 点击按钮禁用文本框 -->
+    <!-- 写一个按钮 -->
+    <!-- <button id="btn">禁用文本框</button> -->
+    <!-- 创建一个输入框 -->
+    <!-- <input type="text" name="" id="txt"> -->
+    <!-- js -->
+    <!-- <script>
+        //   获取按钮
+        var oBtn = document.getElementById("btn");
+        //  获取输入框 -->
+    <!-- var input = document.getElementById("txt");
+        // 给按钮添加点击事件
+        oBtn.onclick = function () {
+             通过输入框标签的disabled = true属性禁用文本框 -->
+    <!-- input.disabled = true;
+        }
+
+    </script>  -->
+
+    <!-- <button id="btn">禁用</button>
+    <input type="text" name="" id="txt">
+    <script>
+        var oBtn = document.getElementById("btn");
+        var input = document.getElementById("txt");
+        oBtn.onclick = function () {
+            input.disabled = true;
+        }
+    </script> -->
+
+    <!-- 点击按钮修改泪飙背景颜色 -->
+    <!-- 写一个按钮 -->
+    <!-- <button id="btn">按钮</button> -->
+    <!-- 写一个无序列表 -->
+    <!-- <ul>
+        <li>大头儿子</li>
+        <li>小头爸爸</li>
+        <li>熊大</li>
+        <li>熊二</li>
+    </ul>
+    <script>
+    var oBtn = document.getElementById("btn");
+    oBtn.onclick = function(){
+        var ul = document.getElementsByTagName("ul")[0];
+        ul.style.backgroundColor = "red";
+    }
+    </script> -->
+
+    <!-- <button id="btn">按钮</button>
+    <ul>
+        <li>刘杰</li>
+        <li>大猪蹄子</li>
+        <li>呀呀呀</li>
+    </ul>
+    <script>
+    var oBtn = document.getElementById("btn");
+    oBtn.onclick = function(){
+        var ul = document.getElementsByTagName("ul")[0];
+        ul.style.backgroundColor = "pink";
+    }
+    </script> -->
+
+    <!-- 隔行变色 -->
+    <!-- 写表格 -->
+    <!-- <table border="1" cellspacing="0">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </tr>
+        <tr>
+            <td>刘杰</td>
+            <td>21</td>
+            <td>男</td>
+        </tr>
+        <tr>
+            <td>王永红</td>
+            <td>18</td>
+            <td>女</td>
+        </tr>
+        <tr>
+            <td>哈哈哈</td>
+            <td>3</td>
+            <td>保密</td>
+        </tr>
+    </table> -->
+    <!-- js -->
+
+    <!-- <script> -->
+    <!-- // 获取表格的行(tr)元素
+        var tr = document.getElementsByTagName("tr");
+        //  遍历行tr -->
+    <!-- for (var i = 0; i < tr.length; i++) {
+            // 判断序号能否被2整除 -->
+    <!-- if (i % 2 == 0) {
+                tr[i].style.backgroundColor = "yellow";
+            } else{
+                tr[i].style.backgroundColor = "red";
+            }
+        } -->
+
+    <!-- </script>  -->
+
+    <!-- <table border="1" cellspacing = "0">
+        <tr>
+            <td>123</td>
+            <td>456</td>
+            <td>789</td>
+        </tr>
+        <tr>
+            <td>qwe</td>
+            <td>asd</td>
+            <td>zxc</td>
+        </tr>
+        <tr>
+            <td>rfv</td>
+            <td>tgb</td>
+            <td>yhn</td>
+        </tr>
+    </table>
+<script>
+var tr = document.getElementsByTagName("tr");
+for(var i = 0; i < tr.length; i++){
+    if(i % 2 == 0){
+        tr[i].style.backgroundColor = "blue";
+    }else{
+        tr[i].style.backgroundColor = "green";
+    }
+}
+</script> -->
+
+    <!-- 列表的高亮显示 -->
+    <!-- 写一个列表 -->
+    <!-- <ul>
+        <li>hahahh</li>
+        <li>猪蹄</li>
+        <li>猪头</li>
+        <li>大猪蹄</li>
+        <li>大猪头</li>
+    </ul> -->
+    <!-- // <script> -->
+    <!-- // var li = document.getElementsByTagName("li");
+        //遍历列表项
+        // for (var i = 0; i < li.length; i++) {
+            // 给列表项添加一个鼠标移入事件
+            // li[i].onmouseover = function () {
+                //给每个列表项添加一个背景颜色
+                // for (var j = 0; j < li.length; j++) {
+                //     li[j].style.backgroundColor = "white";
+                // }
+                // 给鼠标移上去的列表项添加另外一个颜色
+        //         this.style.backgroundColor = "pink";
+        //     }
+        // } -->
+    <!-- // </script> -->
+
+    <!-- 显示和隐藏二维码 -->
+    <!-- 写布局 -->
+    <!-- <div class="box"> -->
+    <!-- 点击a标签图片显示和隐藏 -->
+    <!-- <a href="" id="a"></a>
+        <img src="./456.png" alt="" id="imgs" class="hide">
+    </div> -->
+    <!-- js -->
+    <!-- <script>
+        var a = document.getElementById("a");
+        var img = document.getElementById("imgs");
+        //鼠标移入
+        a.onmouseover = function () {
+            //图片显示
+            img.className = "show";
+        }
+        //鼠标移出
+        a.onmouseout = function () {
+            //图片隐藏
+            img.className = "hide";
+        }
+    </script> -->
+
+    <!-- <div class="box">
+        <a href="" id="a"></a>
+        <img src="./456.png" alt="" id="imgs" class="hide">
+    </div>
+    <script>
+        var a = document.getElementById("a");
+        var img = document.getElementById("imgs");
+        a.onmouseover = function () {
+            img.className = "show";
+        }
+        a.onmouseout = function () {
+            img.className = "hide";
+        }
+    </script> -->
+
+    <!--根据name属性值获取元素 -->
+    <!-- <input type="text" name="put" id="">
+    <script>
+    console.log(document.getElementsByName("put")[0]);
+    </script> -->
+    <!-- <button name="btn"></button>
+    <script>
+    console.log(document.getElementsByName("btn")[0]);
+    </script> -->
+
+    <!-- 根据类名获取元素 -->
+    <!-- <div class="box"></div>
+    <p class="ps"></p>
+    <script>
+    console.log(document.getElementsByClassName("box")[0]);
+    console.log(document.getElementsByClassName("ps")[0]);
+    </script> -->
+
+    <!-- 获取元素的其他方法 -->
+    <!--  <div class="box"></div>
+    <div></div>
+    <div id="bix"></div>
+    <div name = "cc"></div>
+    <script>
+    console.log(document.querySelector(".box"));
+    console.log(document.querySelector("div"));
+    console.log(document.querySelector("#bix"));
+    console.log(document.querySelector("[name = 'cc']"));
+    </script> -->
+    <!-- <span></span>
+    <span id="s"></span>
+    <span class="p"></span>
+    <script>
+    console.log(document.querySelectorAll("span"));
+    </script> -->
+
+    <!-- 高亮显示div -->
+    <!-- <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        // 获取所有div
+        var div = document.getElementsByTagName("div");
+        // 遍历
+        for (var i = 0; i < div.length; i++) {
+            // 当鼠标移入 div显示边框
+            div[i].onmouseover = function () {
+                this.style.border = "2px solid red";
+            }
+            // 当鼠标移除 边框没有
+            div[i].onmouseout = function () {
+                this.style.border = "";
+            }
+        }
+
+    </script> -->
+
+    <!-- html -->
+    <!-- 标题 -->
+    <!-- <h4>美女画廊</h4> -->
+    <!-- 图片列表 -->
+    <!-- <ul>
+        <li>
+            <a href="./1.jpg" title = "图片A">
+                <img src="./1-small.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="./2.jpg" title = "图片B">
+                <img src="./2-small.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="./3.jpg" title = "图片C">
+                <img src="./3-small.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="./4.jpg" title = "图片D">
+                <img src="./4-small.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="./5.jpg" title = "图片E">
+                <img src="./5-small.jpg" alt="">
+            </a>
+        </li>
+    </ul> -->
+    <!-- 预览图片 -->
+    <!-- <img src="./placeholder.png" alt="" class="imgs"> -->
+    <!-- 文字 -->
+    <!-- <p>请选择一个图片</p> -->
+    <!-- <script>
+//获取所有a标签
+var a = document.getElementsByTagName("a");
+//遍历a标签
+for(var i = 0 ; i < a.length; i++){
+    //给遍历的每个元素添加点击事件
+    a[i].onclick = function(){
+        //把点击的a标签身上的href地址给预览图的src
+        document.querySelector(".imgs").src = this.href;
+        //把点击的a标签身上的title属性 给p标签的innertext
+        document.querySelector("p").innerText = this.title;
+        //防止跳转
+        return false;
+    }
+}
+    </script> -->
+</body>
+
+</html>
